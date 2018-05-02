@@ -372,6 +372,22 @@ header.masthead p {
   text-decoration: none;
 }
 
+.network-box:hover .fa-slack {
+  color: #e9a820 !important;
+}
+
+.network-box:hover .fa-twitter {
+  color: #00aced !important;
+}
+
+.network-box:hover .fa-github {
+  color: #333 !important;
+}
+
+.network-box:hover .fa-meetup {
+  color: #e0393e !important;
+}
+
 #meetup li {
   list-style-type: none;
 }
