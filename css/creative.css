@@ -350,12 +350,24 @@ header.masthead p {
   padding: 5rem 0;
 }
 
-#program {
+#details {
   color: #fff;
   text-align: start;
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: x-large;
   margin: 40px 0;
+}
+
+#details .icon {
+  text-align: center;
+  margin: auto;
+  color: #212529;
+}
+
+#program > h4 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
 #networks {
@@ -394,8 +406,9 @@ header.masthead p {
 
 #meetup li::before {
   content: ">";
-  margin-right: 5px;
+  margin-right: 1rem;
   font-weight: bold;
+  color: #212529;
 }
 
 footer {
