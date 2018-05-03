@@ -364,9 +364,12 @@ header.masthead p {
   color: #212529;
 }
 
+#details .row {
+  margin-bottom: 1rem;
+}
+
 #program > h4 {
   margin-bottom: 1rem;
-  margin-top: 1rem;
   font-weight: bold;
 }
 
