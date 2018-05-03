@@ -170,9 +170,9 @@ img::-moz-selection {
   }
 }
 
-header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 56px);
+header {
+  width: 100%;
+  height: 100%;
 }
 
 header.masthead hr {
@@ -333,7 +333,7 @@ header.masthead p {
 #particles canvas {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   z-index: 1;
 }
 
@@ -342,8 +342,8 @@ header.masthead p {
 }
 
 .logo img {
-  margin-bottom: 30px;
-  width: 13%;
+  margin-bottom: 1rem;
+  width: 6rem;
 }
 
 #meetup {
