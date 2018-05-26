@@ -133,38 +133,15 @@
     </div>
   </section>
 
-  <!--section class="bg-primary" id="meetup">
+  <section class="bg-dark" id="meetup">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <h2 class="section-heading text-white">Prochain Meetup</h2>
-          <hr class="light my-4">
-          <div id="details">
-            <p class="mb-4">
-              <div class="row">
-                <span class="icon col-1 fa fa-lg fa-calendar-alt"></span>
-                <span class="col-11">17/05/2018</span>
-              </div>
-              <div class="row">
-                <span class="icon col-1 fas fa-lg fa-map-marker-alt"></span>
-                <span class="col-11">
-                  Epitech Nantes
-                  <br/> 18 rue Flandres Dunkerque</span>
-              </div>
-              <div id="program">
-                <h4>Au programme :</h4>
-                <ul>
-                  <li>Les usages concrets de la blockchain</li>
-                  <li>La proof-of-stake</li>
-                </ul>
-              </div>
-            </p>
-          </div>
-          <a class="btn btn-light btn-xl" href="http://meetu.ps/e/FdqpQ/yGZJB/f" target="_blank">Je m'inscris</a>
+          <h2 class="section-heading text-white">Prochain Meetup à venir</h2>
         </div>
       </div>
     </div>
-  </section-->
+  </section>
 
   <section class="bg-primary" id="team">
     <div class="container">
@@ -399,6 +376,8 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/main.js"></script>
+  <script src="js/meetup.js"></script>
+  <script src="https://api.meetup.com/2/events?group_urlname=Blockchain-Societe-Nantes&callback=callbackMeetup"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
