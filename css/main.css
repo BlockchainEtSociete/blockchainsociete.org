@@ -27,10 +27,6 @@ a {
   transition: all 0.2s;
 }
 
-a:hover {
-  color: #f05f40;
-}
-
 h1,
 h2,
 h3,
@@ -183,6 +179,31 @@ h2 {
 .logo img {
   margin-bottom: 1rem;
   width: 6rem;
+}
+
+.gotop {
+  margin: 1rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 3rem;
+  display: none;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background: #f05f40;
+  border-radius: 20%;
+  opacity: 0.5;
+}
+
+.gotop:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+.gotop i {
+  font-size: 3rem;
 }
 
 #about {

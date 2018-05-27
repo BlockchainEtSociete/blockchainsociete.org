@@ -74,6 +74,11 @@
     </div>
   </header>
 
+
+  <a href="#" class="gotop">
+    <i class="fas fa-angle-double-up"></i>
+  </a>
+
   <section id="about">
     <div class="container my-auto">
       <div class="row">
@@ -380,6 +385,29 @@
     particlesJS.load('particles', './assets/particles.json', function () {
       console.log('callback - particles.js config loaded');
     });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+
+      var offset = 250;
+      var duration = 300;
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > offset) {
+          $('.gotop').fadeIn(duration);
+        } else {
+          $('.gotop').fadeOut(duration);
+        }
+      });
+
+      $('.gotop').click(function (event) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, duration);
+        return false;
+      })
+    });
+
   </script>
 
 </body>
