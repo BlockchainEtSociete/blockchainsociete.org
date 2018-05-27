@@ -296,18 +296,25 @@ h2 {
 }
 */
 
-#team .team-list {
+#team .team-list,
+#partners .partner-list {
   text-align: center;
   justify-content: center;
 }
 
-#team .team-list .card {
+#team .team-list .card,
+#partners .partner-list .card {
   width: 9rem;
   background: none;
   border: none;
   color: #fff;
   margin: 0 1rem;
   font-size: large;
+}
+
+#partners .partner-list .card {
+  width: 13rem;
+  margin: 1rem;
 }
 
 footer {
