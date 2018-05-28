@@ -54,12 +54,14 @@ function callbackMeetup(data) {
     </div>';
       
     var next_event = data.results[0];
+    var oMeetupDiv = document.getElementById("meetup");
     
-    document.getElementById("meetup").innerHTML = htmlTemplate;
+    oMeetupDiv.innerHTML = htmlTemplate;
     document.getElementById("next_meetup_date").innerText = _formatDate(new Date(next_event.time));
     document.getElementById("next_meetup_location").innerHTML = unescape(next_event.venue.name + '<br/>' + next_event.venue.address_1 + '<br/> ' + next_event.venue.city);
     document.getElementById("next_meetup_description").innerHTML = unescape(next_event.description);
     document.getElementById("next_meetup_url").href = unescape(next_event.event_url);
+    oMeetupDiv.className = oMeetupDiv.className.replace("d-none","");
 
   }
 
