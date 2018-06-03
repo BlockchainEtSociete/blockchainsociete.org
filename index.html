@@ -70,6 +70,9 @@
         <div class="col-lg-8 mx-auto">
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">En savoir plus</a>
         </div>
+        <div class="col-lg-8 mx-auto" onclick="subscribeMembership()">
+          <a class="btn btn-xl">J'adhère</a>
+        </div>
       </div>
     </div>
   </header>
@@ -374,9 +377,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
+  <!-- Web3 1.0.0-beta_24 -->
+  <!--script src="https://cdn.jsdelivr.net/npm/web3@0.20.6/dist/web3.min.js"></script-->
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/1.0/dist/web3.min.js"></script>
+
   <!-- Custom scripts for this template -->
   <script src="js/main.js"></script>
   <script src="js/meetup.js"></script>
+  <script src="js/membership.js"></script>
   <script src="https://api.meetup.com/2/events?group_urlname=Blockchain-Societe-Nantes&callback=callbackMeetup"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
