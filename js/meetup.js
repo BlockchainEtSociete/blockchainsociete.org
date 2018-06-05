@@ -42,9 +42,9 @@ function callbackMeetup(data) {
                 <span class="icon col-1 fas fa-lg fa-map-marker-alt"></span>\
                 <span class="col-11" id="next_meetup_location"></span>\
               </div>\
-              <div id="next_meetup_description">\
-                <h4>Au programme :</h4>\
-                <span id="description"></span>\
+              <div>\
+                <h3 id="next_meetup_name"></h3>\
+                <span id="next_meetup_description"></span>\
               </div>\
             </p>\
           </div>\
@@ -59,6 +59,7 @@ function callbackMeetup(data) {
     oMeetupDiv.innerHTML = htmlTemplate;
     document.getElementById("next_meetup_date").innerText = _formatDate(new Date(next_event.time));
     document.getElementById("next_meetup_location").innerHTML = unescape(next_event.venue.name + '<br/>' + next_event.venue.address_1 + '<br/> ' + next_event.venue.city);
+    document.getElementById("next_meetup_name").innerHTML = unescape(next_event.name);
     document.getElementById("next_meetup_description").innerHTML = unescape(next_event.description);
     document.getElementById("next_meetup_url").href = unescape(next_event.event_url);
     oMeetupDiv.className = oMeetupDiv.className.replace("d-none","");
