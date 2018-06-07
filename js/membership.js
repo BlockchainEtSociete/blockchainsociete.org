@@ -7,6 +7,12 @@ var eth = window.web3.eth;
 
 const abi = [
   {
+    anonymous: false,
+    inputs: [],
+    name: "NewSubscriber",
+    type: "event"
+  },
+  {
     constant: false,
     inputs: [],
     name: "subscribe",
@@ -35,8 +41,10 @@ const abi = [
     type: "function"
   }
 ];
-const addresss = "0x8ebd085262ceb8c8512986ef0c16a8a0f2a53a1e";
+const addresss = "0x352e35d42a29bccd006405c32082f36a50c49417"; //Ropsten network
 var membershipContract = new eth.Contract(abi, addresss);
+
+membershipContract.events.NewSubscriber().on("data", data => {});
 
 eth.getAccounts().then(accounts => {
   console.log("default send account set for contract");
