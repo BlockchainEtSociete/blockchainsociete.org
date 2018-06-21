@@ -165,6 +165,10 @@ h2 {
   font-size: 3rem;
 }
 
+.rounded {
+  border-radius: 1rem !important;
+}
+
 #particles canvas {
   position: absolute;
   width: 100%;
@@ -226,24 +230,30 @@ h2 {
   color: #a5a5a5;
 }
 
-#about .fa-bitcoin {
-  color: #ff9900;
-}
-
-#about .fa-link {
-  color: #fff;
-}
-
 #about h3 {
   font-weight: bold;
 }
 
-#tech_icon i {
-  position: absolute;
+#about .track .head {
+  padding-top: 2em;
+  color: #f05f40;
+}
+
+#about .track .head * {
+  display: inline-block;
+}
+
+#about .track .head i {
+  margin-right: 10px;
+}
+
+#about .track .body {
+  padding: 1.5em;
 }
 
 .track {
   height: 100%;
+  padding: 0 !important;
 }
 
 @media (max-width: 992px) {
