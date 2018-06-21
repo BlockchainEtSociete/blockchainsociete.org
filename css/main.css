@@ -366,6 +366,14 @@ h2 {
   background-color: #530666;
 }
 
+.card.bgo .overlay {
+  background-color: #fff;
+}
+
+.card.bgo p {
+  color: #212529;
+}
+
 .card:hover .overlay {
   opacity: 0.95;
 }
