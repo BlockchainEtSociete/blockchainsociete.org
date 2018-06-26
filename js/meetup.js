@@ -1,33 +1,12 @@
 /**
  * Handle the result of the Meetup event (v2) API
  * and refresh the view if there is a result
- * @param {*} data 
+ * @param {*} data
  */
 function callbackMeetup(data) {
-  /**
-   * Format Date object to String with pattern dd/mm/yyyy
-   * @param {Date} dateObject
-   * @return {String}
-   */
-  var _formatDate = function(dateObject) {
-      var d = new Date(dateObject);
-      var day = d.getDate();
-      var month = d.getMonth() + 1;
-      var year = d.getFullYear();
-      if (day < 10) {
-          day = "0" + day;
-      }
-      if (month < 10) {
-          month = "0" + month;
-      }
-      var date = day + "/" + month + "/" + year;
-
-      return date;
-  }
-
   if (!!data && !!data.results && data.results.length > 0) {
     var htmlTemplate =
-    '<div class="container">\
+      '<div class="container">\
       <div class="row">\
         <div class="col-lg-8 mx-auto text-center">\
           <h2 class="section-heading text-white">Prochain Meetup</h2>\
@@ -52,18 +31,30 @@ function callbackMeetup(data) {
         </div>\
       </div>\
     </div>';
-      
+
     var next_event = data.results[0];
     var oMeetupDiv = document.getElementById("meetup");
-    
+
     oMeetupDiv.innerHTML = htmlTemplate;
-    document.getElementById("next_meetup_date").innerText = _formatDate(new Date(next_event.time));
-    document.getElementById("next_meetup_location").innerHTML = unescape(next_event.venue.name + '<br/>' + next_event.venue.address_1 + '<br/> ' + next_event.venue.city);
-    document.getElementById("next_meetup_name").innerHTML = unescape(next_event.name);
-    document.getElementById("next_meetup_description").innerHTML = unescape(next_event.description);
-    document.getElementById("next_meetup_url").href = unescape(next_event.event_url);
-    oMeetupDiv.className = oMeetupDiv.className.replace("d-none","");
-
+    document.getElementById("next_meetup_date").innerText = new Date(
+      next_event.time
+    ).toLocaleDateString();
+    document.getElementById("next_meetup_location").innerHTML = unescape(
+      next_event.venue.name +
+        "<br/>" +
+        next_event.venue.address_1 +
+        "<br/> " +
+        next_event.venue.city
+    );
+    document.getElementById("next_meetup_name").innerHTML = unescape(
+      next_event.name
+    );
+    document.getElementById("next_meetup_description").innerHTML = unescape(
+      next_event.description
+    );
+    document.getElementById("next_meetup_url").href = unescape(
+      next_event.event_url
+    );
+    oMeetupDiv.className = oMeetupDiv.className.replace("d-none", "");
   }
-
 }
