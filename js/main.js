@@ -34,6 +34,21 @@
     offset: 57
   });
 
+  // manage section link
+  $(".section-title h2").on("click", function(event) {
+    const section = event.target.closest("section");
+    if (section !== undefined) {
+      const id = $(section).attr("id");
+      $("html, body").animate(
+        { scrollTop: $("#" + id).offset().top },
+        "fast",
+        function() {
+          window.location.hash = id;
+        }
+      );
+    }
+  });
+
   // Scroll reveal calls
   window.sr = ScrollReveal();
   sr.reveal(
