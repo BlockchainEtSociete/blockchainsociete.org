@@ -169,6 +169,20 @@ h2 {
   border-radius: 1rem !important;
 }
 
+.section-title {
+  display: inline-block;
+}
+
+.section-title i {
+  font-size: x-large;
+  visibility: hidden;
+}
+
+.section-title h2:hover i {
+  visibility: visible;
+  vertical-align: middle;
+}
+
 #particles canvas {
   position: absolute;
   width: 100%;
