@@ -183,6 +183,12 @@ h2 {
   vertical-align: middle;
 }
 
+.transparent-link,
+.transparent-link:active,
+.transparent-link:hover {
+  color: unset;
+}
+
 #particles canvas {
   position: absolute;
   width: 100%;
@@ -263,6 +269,14 @@ h2 {
 
 #about .track .body {
   padding: 1.5em;
+}
+
+#about .wallet-icon {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: #795548;
 }
 
 .track {
