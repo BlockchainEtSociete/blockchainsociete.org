@@ -173,12 +173,12 @@ h2 {
   display: inline-block;
 }
 
-.section-title i {
+.section-title svg {
   font-size: x-large;
   visibility: hidden;
 }
 
-.section-title h2:hover i {
+.section-title h2:hover svg {
   visibility: visible;
   vertical-align: middle;
 }
@@ -220,7 +220,7 @@ h2 {
   color: #ffffff;
 }
 
-.gotop i {
+.gotop svg {
   font-size: 3rem;
 }
 
@@ -257,7 +257,7 @@ h2 {
   display: inline-block;
 }
 
-#about .track .head i {
+#about .track .head svg {
   margin-right: 10px;
 }
 
@@ -331,18 +331,6 @@ h2 {
 .network-box:hover .fa-envelope {
   color: gray !important;
 }
-/*
-#meetup li {
-  list-style-type: none;
-}
-
-#meetup li::before {
-  content: ">";
-  margin-right: 1rem;
-  font-weight: bold;
-  color: #fff;
-}
-*/
 
 #team .team-list,
 #partners .partner-list {
