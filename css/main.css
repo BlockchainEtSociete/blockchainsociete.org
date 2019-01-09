@@ -345,18 +345,10 @@ h2 {
 .network-box:hover .fa-envelope {
   color: gray !important;
 }
-/*
-#meetup li {
-  list-style-type: none;
-}
 
-#meetup li::before {
-  content: ">";
-  margin-right: 1rem;
-  font-weight: bold;
-  color: #fff;
+.network-box:hover .fa-facebook-f {
+  color: #3b5998 !important;
 }
-*/
 
 #team .team-list,
 #partners .partner-list {
