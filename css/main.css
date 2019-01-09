@@ -350,6 +350,10 @@ h2 {
   color: #3b5998 !important;
 }
 
+.network-box:hover .fa-linkedin {
+  color: #4875B4 !important;
+}
+
 #team .team-list,
 #partners .partner-list {
   text-align: center;
