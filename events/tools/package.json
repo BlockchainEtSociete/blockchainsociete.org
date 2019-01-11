@@ -1,0 +1,19 @@
+{
+  "name": "org.blockchainetsociete",
+  "version": "0.0.1",
+  "description": "Génération HTML des events passés et à venir depuis l'API Meetup",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlockchainEtSociete/BlockchainEtSociete.github.io.git"
+  },
+  "author": "Blockchain Et Société",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlockchainEtSociete/BlockchainEtSociete.github.io/issues"
+  },
+  "homepage": "https://github.com/BlockchainEtSociete/BlockchainEtSociete.github.io#readme"
+}
