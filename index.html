@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
 
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/css/swiper.min.css">
+
   <!-- Custom fonts for this template -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
@@ -139,7 +143,76 @@
       </div>
   </section>
 
-  <section class="bg-dark d-none text-white" id="meetup">
+
+  <section class="bg-dark text-white" id="events">
+    <div class="container-fluid">
+      <div class="row section-head m-0">
+          <div class="col text-center section-title">
+              <h2>
+                <i class="fas fa-link"></i> Les évènements</h2>
+              <hr class="my-4">
+            </div>
+      </div>
+      <div class="row swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide event">Slide 1</div>
+            <div class="swiper-slide event">Slide 2</div>
+            <div class="swiper-slide event">Slide 3</div>
+            <div class="swiper-slide event">Slide 4</div>
+            <div class="swiper-slide event">Slide 5</div>
+            <div class="swiper-slide event">Slide 6</div>
+            <div class="swiper-slide event">
+                <div class="event-body">
+                    <h3>🇻🇪 Bolivar VS crypto Petro // actus crypto Eth 2.0</h3>
+                    <div class="event-date-time">
+                      <p>déroulé le</p>
+                      <p class="event-date">19/12/18</p>
+                    </div>
+                  </div>
+                  <a class="event-more">plus d'info</a>
+            </div>
+            <div class="swiper-slide event">
+                <div class="event-body">
+                    <h3>🚀 Bien démarrer son POC Blockchain | Tokens non fongibles 🍄</h3>
+                    <div class="event-date-time">
+                      <p>déroulé le</p>
+                      <p class="event-date">19/12/18</p>
+                    </div>
+                  </div>
+                  <a class="event-more">plus d'info</a>
+            </div>
+            <div class="swiper-slide event">
+              <div class="event-body">
+                <h3>🎁Airdrop : kezako ? | Cryptos : bilan et perspectives 📈</h3>
+                <div class="event-date-time">
+                  <p>déroulé le</p>
+                  <p class="event-date">19/12/18</p>
+                </div>
+              </div>
+              <a class="event-more">plus d'info</a>
+            </div>
+            <div class="swiper-slide event upcoming">
+              <div class="event-body">
+                <h3> IOTA, une solution pour révolutionner l'IoT // ⚠️ Inscriptions EventBrite</h3>
+                <div class="event-date-time">
+                  <p class="event-date">Mercredi, 23 Janvier 2019</p>
+                  <p class="event-time">19:00 - 22:00</p>
+                </div>
+                <p class="event-address">Ynov Nantes, 20 Boulevard Général de Gaulle NANTES</p>
+              </div>
+              <a class="event-more">plus d'info</a>
+            </div>
+        </div>
+        <span class="carousel-navigation">
+          <i class="carousel-prev fas fa-caret-left"></i>
+          <i class="carousel-next fas fa-caret-right"></i>
+        </span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-dark d-none text-white" id="meetup_">
     <div class="container">
 
       <div class="row">
@@ -442,6 +515,9 @@
   <!-- Plugin JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/js/swiper.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/main.js"></script>
