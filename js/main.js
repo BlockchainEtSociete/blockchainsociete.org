@@ -51,6 +51,76 @@
     }
   });
 
+  /*
+  * CAROUSEL SECTION
+  */
+   
+  let carouselInitialized = false;
+
+  let swiper = new Swiper ('.swiper-container', {
+    initialSlide: 10,
+    slidesPerView: 6,
+    spaceBetween: 30,
+    centeredSlides: true,
+    on:{
+      slideChange: updateButtons
+    },
+    breakpoints:{
+      576:{
+        slidesPerView:1
+      },
+      768:{
+        slidesPerView:2
+      },
+      992:{
+        slidesPerView:3
+      },
+      1200:{
+        slidesPerView:4
+      },
+      1690:{
+        slidesPerView:5
+      }
+    }
+  })
+
+  carouselInitialized = true;
+
+
+  let carouselNext = $('.carousel-navigation .carousel-next')
+  let carouselPrev = $('.carousel-navigation .carousel-prev')
+  
+  carouselNext.click(function(){
+    swiper.slideNext()
+    updateButtons();
+  })
+  
+  carouselPrev.click(function(){
+    swiper.slidePrev()
+    updateButtons();
+  })
+
+  function setButtonDisabled(button,disabled){
+    button.toggleClass('disabled',disabled);
+  }
+
+  function updateButtons(){
+    console.log("updateButtons")
+    if( carouselInitialized ){
+    console.log("carouselInitialized")
+
+      setButtonDisabled(carouselPrev,swiper.isBeginning)
+      setButtonDisabled(carouselNext,swiper.isEnd)
+    }
+  }
+
+  updateButtons();
+
+  /*
+  * END CAROUSEL SECTION
+  */
+  
+
   // Scroll reveal calls
   window.sr = ScrollReveal();
   sr.reveal(
