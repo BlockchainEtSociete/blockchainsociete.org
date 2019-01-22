@@ -4,7 +4,7 @@ const path = require("path");
 
 const EVENTS_URL="https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=Blockchain-Societe-Nantes&status=past,upcoming&page=100"
 
-const OUTPUT_FILE_PATH=path.join(__dirname,"../../data/events.json");
+const OUTPUT_FILE_PATH=path.join(__dirname,"hugo/data/events.json");
 
 async function buildResponse(response) {
     return new Promise((resolve, reject) => {
@@ -56,7 +56,7 @@ function buildEventFile(events){
         return {
             name: event.name,
             date: parseDate(event.time),
-            duration: event.duration,
+            duration: events.duration || 10800000,
             venue: venue,
             event_url: event.venue_url
         }
