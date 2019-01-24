@@ -1,10 +1,11 @@
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require('child_process');
 
 const EVENTS_URL="https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=Blockchain-Societe-Nantes&status=past,upcoming&page=100"
-
-const OUTPUT_FILE_PATH=path.join(__dirname,"hugo/data/events.json");
+const EVENT_FILE_PATH=path.join(__dirname,"data/events.json");
+const SITE_PATH=path.join(__dirname,'docs');
 
 function formatDate(date){
     let dateObj = new Date(date);
@@ -58,7 +59,7 @@ function buildEventFile(events){
         }
     });
 
-    fs.writeFileSync(OUTPUT_FILE_PATH,JSON.stringify(output));
+    fs.writeFileSync(EVENT_FILE_PATH,JSON.stringify(output));
     
 }
 
@@ -67,6 +68,7 @@ console.log("Récupération des évènements depuis api.meetup.com");
 fetch(EVENTS_URL)
     .then(response => JSON.parse(response).results)
     .then(buildEventFile)
+    .then(_=>execSync(`hugo -d ${SITE_PATH}`))
     .then(_=>console.log("Terminé avec succès"))
     .catch((error)=>{
         console.error(error);
