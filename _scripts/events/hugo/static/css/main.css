@@ -347,13 +347,30 @@ h2 {
   font-size: unset !important;
 }
 
+.event.upcoming .occured-label{
+  display: none;
+}
+
+.event .event-time{
+  display: none;
+}
+
+.event.upcoming .event-time{
+  display: block;
+}
+
 .event .event-date-time p:nth-child(1){
   font-weight: lighter;
   font-size: smaller;
 }
 
-.event-address{
+.event-venue{
   font-weight: lighter;
+  display: none;
+}
+
+.event.upcoming .event-venue{
+  display: block;
 }
 
 .event-more{

@@ -27,7 +27,7 @@
     rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="css/main.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
 
 
   <!-- generated favicons -->
@@ -155,7 +155,12 @@
       </div>
       <div class="row swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide event">Slide 1</div>
+
+            {{ range $.Site.Data.events }}
+                {{ partial "event.html" . }}
+            {{ end }}
+
+            <!-- <div class="swiper-slide event">Slide 1</div>
             <div class="swiper-slide event">Slide 2</div>
             <div class="swiper-slide event">Slide 3</div>
             <div class="swiper-slide event">Slide 4</div>
@@ -201,7 +206,7 @@
                 <p class="event-address">Ynov Nantes, 20 Boulevard Général de Gaulle NANTES</p>
               </div>
               <a class="event-more">plus d'info</a>
-            </div>
+            </div> -->
         </div>
         <span class="carousel-navigation">
           <i class="carousel-prev fas fa-caret-left"></i>
@@ -520,8 +525,8 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/js/swiper.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/main.js"></script>
-  <script src="js/meetup.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/meetup.js"></script>
   <script src="https://api.meetup.com/2/events?group_urlname=Blockchain-Societe-Nantes&callback=callbackMeetup"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -558,3 +563,4 @@
 </body>
 
 </html>
+

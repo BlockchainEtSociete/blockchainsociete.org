@@ -51,20 +51,43 @@
     }
   });
 
+  // Compute the number of events
+  let eventNumber = $('#events .swiper-wrapper').children().length;
+
+  const isUpcomingDate = (date)=>{
+    date = date.split('/').map(s=>parseInt(s))
+    date = new Date(date[2],date[1]-1,date[0]);
+    return date >= Date.now();
+  }
+
+  // Add upcoming on event div if not passed
+  const handleUpcomingEvent = ()=>{
+    let lastEvent = $('#events .swiper-wrapper .event').last()
+    let date = lastEvent.find('.event-date-time .event-date')[0].innerHTML
+
+    if( isUpcomingDate(date) ){
+      lastEvent.addClass('upcoming');
+    }
+  };
+
+  handleUpcomingEvent();
+
   /*
   * CAROUSEL SECTION
   */
    
+
   let carouselInitialized = false;
 
   let swiper = new Swiper ('.swiper-container', {
-    initialSlide: 10,
+    initialSlide: eventNumber-1,
     slidesPerView: 6,
     spaceBetween: 30,
     centeredSlides: true,
     on:{
       slideChange: updateButtons
     },
+    keyboard:true,
     breakpoints:{
       576:{
         slidesPerView:1
@@ -105,10 +128,7 @@
   }
 
   function updateButtons(){
-    console.log("updateButtons")
     if( carouselInitialized ){
-    console.log("carouselInitialized")
-
       setButtonDisabled(carouselPrev,swiper.isBeginning)
       setButtonDisabled(carouselNext,swiper.isEnd)
     }
