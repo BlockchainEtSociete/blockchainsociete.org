@@ -1,12 +1,17 @@
-# Comment utiliser les scripts de blockchainsociete.org
+# BlockchainSociete.org
 
-## Générer les évènements
+Ce projet est un site statique pour [l'association blockchain et societe](http://blockchainsociete.org) généré avec [Hugo](https://gohugo.io).
+
+La section évènements est générée à partir d'un template hugo dans lequel sont injectées les données provenant de l'api meetup.com
+
+## Prérequis
+
+- [Hugo](https://gohugo.io/getting-started/quick-start/)
+
+## Générer le site
 
 ```bash
-node _scripts/events
+node .
 ```
 
-Récupère la liste des évènements (passés et à venir), 
-extrait les informations nécessaires 
-puis export en json les données dans un fichier (`_scripts/events/hugo/data/events.json`) 
-pour être lu par `hugo` le générateur de site statique.
+Une fois les données récupérées, le site est généré dans le répertoire [`/docs`](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch).

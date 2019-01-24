@@ -68,6 +68,7 @@ console.log("Récupération des évènements depuis api.meetup.com");
 fetch(EVENTS_URL)
     .then(response => JSON.parse(response).results)
     .then(buildEventFile)
+    .then(_=>console.log("Génération du site"))
     .then(_=>execSync(`hugo -d ${SITE_PATH}`))
     .then(_=>console.log("Terminé avec succès"))
     .catch((error)=>{
