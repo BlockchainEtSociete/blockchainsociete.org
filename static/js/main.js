@@ -51,6 +51,11 @@
     }
   });
 
+  /*
+  * CAROUSEL SECTION
+  */
+   
+
   // Compute the number of events
   let eventNumber = $('#events .swiper-wrapper').children().length;
 
@@ -71,11 +76,6 @@
   };
 
   handleUpcomingEvent();
-
-  /*
-  * CAROUSEL SECTION
-  */
-   
 
   let carouselInitialized = false;
 
