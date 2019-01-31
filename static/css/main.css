@@ -404,28 +404,6 @@ h2 {
   color:#46494A;
 }
 
-#details {
-  text-align: start;
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: x-large;
-  margin: 40px 0;
-}
-
-#details .icon {
-  text-align: center;
-  margin: auto;
-  color: #fff;
-}
-
-#details .row {
-  margin-bottom: 1rem;
-}
-
-#program > h4 {
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
 #networks {
   background-color: #fff;
   color: #212529;
