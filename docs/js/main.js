@@ -51,6 +51,11 @@
     }
   });
 
+  /*
+  * CAROUSEL SECTION
+  */
+   
+
   // Compute the number of events
   let eventNumber = $('#events .swiper-wrapper').children().length;
 
@@ -72,16 +77,11 @@
 
   handleUpcomingEvent();
 
-  /*
-  * CAROUSEL SECTION
-  */
-   
-
   let carouselInitialized = false;
 
   let swiper = new Swiper ('.swiper-container', {
     initialSlide: eventNumber-1,
-    slidesPerView: 6,
+    slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
     on:{
@@ -99,10 +99,10 @@
         slidesPerView:3
       },
       1200:{
-        slidesPerView:4
+        slidesPerView:3
       },
       1690:{
-        slidesPerView:5
+        slidesPerView:4
       }
     }
   })
