@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "11"
+before_install:
+  - sudo apt-get update
+cache: npm
+install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.deb
+  - sudo dpkg -i hugo*.deb
+  - npm i
+script:
+  - git config user.email ${EMAIL}
+  - git config user.name ${USER}
+  - git checkout -b new_website_content
+  - node .
+  - git add docs/ data/
+  - git commit -m "Generate content of website by Hugo with TravisCI"
+  - git push "https://${TRAVIS_SECURE_TOKEN_NAME}@${GITHUB_REPO}" new_website_content
