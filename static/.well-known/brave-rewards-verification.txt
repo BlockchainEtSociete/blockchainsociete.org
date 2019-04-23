@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: blockchainsociete.org
+Token: b9884506f8c1284d2af2b64381ecf2ce09d133d77853d1739b05c73ffb274064
