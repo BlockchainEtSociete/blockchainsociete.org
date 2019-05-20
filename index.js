@@ -7,22 +7,32 @@ const EVENTS_URL="https://api.meetup.com/2/events?&sign=true&photo-host=public&g
 const EVENT_FILE_PATH=path.join(__dirname,"data/events.json");
 const SITE_PATH=path.join(__dirname,'docs');
 
-function formatDate(date){
-    let dateObj = new Date(date);
-    let offset = dateObj.getTimezoneOffset() * 60 * 1000;
-    let locale = dateObj.getTime() - offset;
-    let localeDate = new Date(locale);
+function formatDate(timestamp) {
+    const dateObj = new Date(timestamp);
+    const offset = dateObj.getTimezoneOffset() * 60 * 1000;
+    const locale = dateObj.getTime() - offset;
+    const localeDate = new Date(locale);
+
+    let day = localeDate.getDate();
+    day = day > 9 ? day : `0${day}`;
+
     let month = localeDate.getMonth() + 1;
-    month = month > 9 ? month : '0'+month;
-    return localeDate.getDate()+'/'+month+'/'+localeDate.getFullYear();
+    month = month > 9 ? month : `0${month}`;
+
+    const year = localeDate.getFullYear();
+
+    return `${day}/${month}/${year}`;
 }
 
-function formatTime(date,duration){
-    let locale = 'fr-FR';
-    let timeOptions = {hour:'2-digit', minute:'2-digit'}
-    let startTime = new Date(date).toLocaleTimeString(locale,timeOptions);
-    let endTime = new Date(date+duration).toLocaleTimeString(locale,timeOptions);
-    return startTime + ' - ' + endTime;
+function formatTime(timestamp, duration) {
+    const locale = 'fr-FR';
+    const timeOptions = {timeZone:'Europe/Paris', hour:'2-digit', minute:'2-digit', hour12: false}
+
+    const startTime = new Date(timestamp).toLocaleTimeString(locale, timeOptions);
+    const endTime = new Date(timestamp + duration).toLocaleTimeString(locale, timeOptions);
+
+    const formatedTime = `${startTime} - ${endTime}`;
+    return formatedTime;
 }
 
 function formatVenue(venue){
@@ -53,7 +63,7 @@ function buildEventFile(events){
         return {
             name: event.name,
             date: formatDate(event.time),
-            time: formatTime(event.time,event.duration || 10800000),
+            time: formatTime(event.time, event.duration || 10800000),
             venue: formatVenue(event.venue),
             url: event.event_url
         }
