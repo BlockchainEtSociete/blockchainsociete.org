@@ -463,9 +463,29 @@ h2 {
 }
 
 #partners .partner-list .card {
+  width: 15rem;
+}  
+
+
+/*
+#partners .partner-list .row > div {
+  display: flex;
+}
+
+#partners .partner-list .row div:nth-child(2) > div {
+  max-height: 10rem;
+  align-items: center;
+}
+
+#partners .partner-list > .row {
+  align-items: center;
+  flex-flow: row;
+}
+
+#partners .partner-list .card {
   width: 13rem;
   margin: 1rem;
-}
+}*/
 
 .card .overlay {
   position: absolute;
@@ -487,6 +507,10 @@ h2 {
   background-color: #42ab9e;
 }
 
+.card.pld .overlay {
+  background-color: #266b35;
+}
+
 .card.zenika .overlay {
   background-color: #b21e3e;
 }
@@ -495,12 +519,8 @@ h2 {
   background-color: #530666;
 }
 
-.card.bgo .overlay {
-  background-color: #fff;
-}
-
-.card.bgo p {
-  color: #212529;
+.card.novapuls .overlay {
+  background-color: #ee6f3de6;
 }
 
 .card:hover .overlay {
