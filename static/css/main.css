@@ -382,9 +382,21 @@ h2 {
   font-size: medium;
   border-radius: 0px 0px 10px 10px;
 }
-
 .event.upcoming .event-more{
   background-color: #f05f40;
+}
+
+#donation {
+  background-color: #141619;
+}
+
+#donation .donation-list {
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+#donation .donation-list img{
+  width: 25rem;
 }
 
 .carousel-navigation{
