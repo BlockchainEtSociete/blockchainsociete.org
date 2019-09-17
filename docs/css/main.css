@@ -382,9 +382,22 @@ h2 {
   font-size: medium;
   border-radius: 0px 0px 10px 10px;
 }
-
 .event.upcoming .event-more{
   background-color: #f05f40;
+}
+
+#donation {
+  background-color: #141619;
+}
+
+#donation .donation-list {
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+#donation .donation-list img{
+  width: 25rem;
+  margin: 5px;
 }
 
 .carousel-navigation{
@@ -458,14 +471,13 @@ h2 {
   background: none;
   border: none;
   color: #fff;
-  margin: 0 1rem;
+  margin: 1rem;
   font-size: large;
 }
 
 #partners .partner-list .card {
-  width: 13rem;
-  margin: 1rem;
-}
+  width: 15rem;
+}  
 
 .card .overlay {
   position: absolute;
@@ -487,6 +499,10 @@ h2 {
   background-color: #42ab9e;
 }
 
+.card.pld .overlay {
+  background-color: #266b35;
+}
+
 .card.zenika .overlay {
   background-color: #b21e3e;
 }
@@ -495,12 +511,8 @@ h2 {
   background-color: #530666;
 }
 
-.card.bgo .overlay {
-  background-color: #fff;
-}
-
-.card.bgo p {
-  color: #212529;
+.card.novapuls .overlay {
+  background-color: #ee6f3de6;
 }
 
 .card:hover .overlay {
