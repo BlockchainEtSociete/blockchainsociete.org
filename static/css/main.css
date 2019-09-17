@@ -397,6 +397,7 @@ h2 {
 
 #donation .donation-list img{
   width: 25rem;
+  margin: 5px;
 }
 
 .carousel-navigation{
@@ -470,34 +471,13 @@ h2 {
   background: none;
   border: none;
   color: #fff;
-  margin: 0 1rem;
+  margin: 1rem;
   font-size: large;
 }
 
 #partners .partner-list .card {
   width: 15rem;
 }  
-
-
-/*
-#partners .partner-list .row > div {
-  display: flex;
-}
-
-#partners .partner-list .row div:nth-child(2) > div {
-  max-height: 10rem;
-  align-items: center;
-}
-
-#partners .partner-list > .row {
-  align-items: center;
-  flex-flow: row;
-}
-
-#partners .partner-list .card {
-  width: 13rem;
-  margin: 1rem;
-}*/
 
 .card .overlay {
   position: absolute;
