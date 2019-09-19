@@ -396,7 +396,8 @@ h2 {
 }
 
 #donation .donation-list img{
-  width: 25rem;
+  height: 25rem;
+  width: auto;
   margin: 5px;
 }
 
