@@ -1,0 +1,16 @@
+{
+  "name": "blockchainsociete.org",
+  "version": "1.0.0",
+  "description": "Blockchain et Societe website",
+  "main": "index.js",
+  "repository": "git@github.com:blockchainEtsociete/blockchainsociete.org",
+  "author": "Blockchain et Societe <contact@blockchainsociete.org>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "hugo-cli": "^0.11.0"
+  }
+}
