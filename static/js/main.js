@@ -165,4 +165,38 @@
     },
     300
   );
+
+  var offset = 250;
+  var duration = 300;
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > offset) {
+      $('.gotop').fadeIn(duration);
+    } else {
+      $('.gotop').fadeOut(duration);
+    }
+  });
+
+  $('.gotop').click(function (event) {
+    event.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, duration);
+    return false;
+  })
+
+  let clipboard = new ClipboardJS('.donation-list img');
+
+  clipboard.on('success',(e)=>{
+    document.getElementsByClassName('alert')[0].innerHTML = `
+      <i><strong>${e.text}</strong><i><br> 
+      copié dans le presse-papier
+    `;
+    $(".alert").removeClass("in").show();
+    $(".alert").delay(5000).addClass("in").fadeOut(2000);
+  })
+
+  clipboard.on('error',(e)=>{
+    console.error(`can't copy to clipboard (${e})`);
+  })
+
+
 })(jQuery); // End of use strict
