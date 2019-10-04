@@ -756,12 +756,12 @@
       </div>
 
       <div class="row donation-list">
-        <img src="./img/donations/ark.png">
-        <img src="./img/donations/eth.png">
-        <img src="./img/donations/bitcoin.png">
-        <img src="./img/donations/fiat.png">
+        <img src="./img/donations/ark.png" data-clipboard-text="ASSRvwixbSmMGjWuJYnEtAdEiErM7acTZR">
+        <img src="./img/donations/eth.png" data-clipboard-text="0xe5D08beA03e776B54508CF96db99745Cd464140D">
+        <img src="./img/donations/bitcoin.png" data-clipboard-text="3E8kKYXZEuwnHmWz9VQhksFN5f65WQ5PWp">
+        <img src="./img/donations/fiat.png" data-clipboard-text="bit.ly/don-bets">
       </div>
-
+      
     </section>
 
   <section id="networks">
@@ -876,6 +876,11 @@
     </div>
   </footer>
 
+  <div class="alert-container">
+    <div class="alert alert-success" role="alert"></div>
+  </div>
+
+
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -889,6 +894,9 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/js/swiper.min.js"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
 
   
   <script src="./js/main.js"></script>
@@ -899,29 +907,6 @@
     particlesJS.load('particles', './assets/particles.json', function () {
       console.log('callback - particles.js config loaded');
     });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-
-      var offset = 250;
-      var duration = 300;
-
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > offset) {
-          $('.gotop').fadeIn(duration);
-        } else {
-          $('.gotop').fadeOut(duration);
-        }
-      });
-
-      $('.gotop').click(function (event) {
-        event.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, duration);
-        return false;
-      })
-    });
-
   </script>
 
 </body>
