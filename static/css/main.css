@@ -399,6 +399,26 @@ h2 {
   height: 25rem;
   width: auto;
   margin: 5px;
+  transition: all .2s ease-in-out;
+}
+
+#donation .donation-list img:hover{
+  transform: scale(1.1);
+}
+
+.alert-container {
+  display: flex;
+  justify-content: center;
+}
+
+.alert {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 0 20px 0 #2d402d
 }
 
 .carousel-navigation{
