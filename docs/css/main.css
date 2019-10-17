@@ -327,7 +327,7 @@ h2 {
 }
 
 .event-body{
-  padding: 30px 20px 0px 20px;  
+  padding: 30px 20px 0px 20px;
 }
 
 .event h3{
@@ -478,7 +478,7 @@ h2 {
 
 #partners .partner-list .card {
   width: 15rem;
-}  
+}
 
 .card .overlay {
   position: absolute;
@@ -510,6 +510,10 @@ h2 {
 
 .card.spacelephant .overlay {
   background-color: #530666;
+}
+
+.card.unik-name .overlay {
+  background-color: #f8662e;
 }
 
 .card.novapuls .overlay {
