@@ -1,8 +1,8 @@
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (
       location.pathname.replace(/^\//, "") ==
         this.pathname.replace(/^\//, "") &&
@@ -13,7 +13,7 @@
       if (target.length) {
         $("html, body").animate(
           {
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top,
           },
           1000,
           "easeInOutExpo"
@@ -26,25 +26,25 @@
   $('[data-toggle="tooltip"]').tooltip();
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $(".js-scroll-trigger").click(function() {
+  $(".js-scroll-trigger").click(function () {
     $(".navbar-collapse").collapse("hide");
   });
 
   // Activate scrollspy to add active class to navbar items on scroll
   $("body").scrollspy({
     target: "#mainNav",
-    offset: 57
+    offset: 57,
   });
 
   // manage section link
-  $(".section-title h2").on("click", function(event) {
+  $(".section-title h2").on("click", function (event) {
     const section = event.target.closest("section");
     if (section !== undefined) {
       const id = $(section).attr("id");
       $("html, body").animate(
         { scrollTop: $("#" + id).offset().top },
         "fast",
-        function() {
+        function () {
           window.location.hash = id;
         }
       );
@@ -52,26 +52,27 @@
   });
 
   /*
-  * CAROUSEL SECTION
-  */
-   
+   * CAROUSEL SECTION
+   */
 
   // Compute the number of events
-  let eventNumber = $('#events .swiper-wrapper').children().length;
+  let eventNumber = $("#events .swiper-wrapper").children().length;
 
-  const isUpcomingDate = (date)=>{
-    date = date.split('/').map(s=>parseInt(s))
-    date = new Date(date[2],date[1]-1,date[0]);
-    return date >= Date.now();
-  }
+  const isUpcomingDate = (date) => {
+    date = date.split("/").map((s) => parseInt(s));
+    date = new Date(date[2], date[1] - 1, date[0]);
+    const d = new Date();
+    d.setDate(date.getDate() + 1);
+    return d.valueOf() >= Date.now();
+  };
 
   // Add upcoming on event div if not passed
-  const handleUpcomingEvent = ()=>{
-    let lastEvent = $('#events .swiper-wrapper .event').last()
-    let date = lastEvent.find('.event-date-time .event-date')[0].innerHTML
+  const handleUpcomingEvent = () => {
+    let lastEvent = $("#events .swiper-wrapper .event").last();
+    let date = lastEvent.find(".event-date-time .event-date")[0].innerHTML;
 
-    if( isUpcomingDate(date) ){
-      lastEvent.addClass('upcoming');
+    if (isUpcomingDate(date)) {
+      lastEvent.addClass("upcoming");
     }
   };
 
@@ -79,67 +80,65 @@
 
   let carouselInitialized = false;
 
-  let swiper = new Swiper ('.swiper-container', {
-    initialSlide: eventNumber-1,
+  let swiper = new Swiper(".swiper-container", {
+    initialSlide: eventNumber - 1,
     slidesPerView: 4,
     spaceBetween: 30,
     centeredSlides: true,
-    on:{
-      slideChange: updateButtons
+    on: {
+      slideChange: updateButtons,
     },
-    keyboard:true,
-    breakpoints:{
-      576:{
-        slidesPerView:1
+    keyboard: true,
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
       },
-      768:{
-        slidesPerView:2
+      768: {
+        slidesPerView: 2,
       },
-      992:{
-        slidesPerView:3
+      992: {
+        slidesPerView: 3,
       },
-      1200:{
-        slidesPerView:3
+      1200: {
+        slidesPerView: 3,
       },
-      1690:{
-        slidesPerView:4
-      }
-    }
-  })
+      1690: {
+        slidesPerView: 4,
+      },
+    },
+  });
 
   carouselInitialized = true;
 
+  let carouselNext = $(".carousel-navigation .carousel-next");
+  let carouselPrev = $(".carousel-navigation .carousel-prev");
 
-  let carouselNext = $('.carousel-navigation .carousel-next')
-  let carouselPrev = $('.carousel-navigation .carousel-prev')
-  
-  carouselNext.click(function(){
-    swiper.slideNext()
+  carouselNext.click(function () {
+    swiper.slideNext();
     updateButtons();
-  })
-  
-  carouselPrev.click(function(){
-    swiper.slidePrev()
-    updateButtons();
-  })
+  });
 
-  function setButtonDisabled(button,disabled){
-    button.toggleClass('disabled',disabled);
+  carouselPrev.click(function () {
+    swiper.slidePrev();
+    updateButtons();
+  });
+
+  function setButtonDisabled(button, disabled) {
+    button.toggleClass("disabled", disabled);
   }
 
-  function updateButtons(){
-    if( carouselInitialized ){
-      setButtonDisabled(carouselPrev,swiper.isBeginning)
-      setButtonDisabled(carouselNext,swiper.isEnd)
+  function updateButtons() {
+    if (carouselInitialized) {
+      setButtonDisabled(carouselPrev, swiper.isBeginning);
+      setButtonDisabled(carouselNext, swiper.isEnd);
     }
   }
 
   updateButtons();
 
   /*
-  * END CAROUSEL SECTION
-  */
-  
+   * END CAROUSEL SECTION
+   */
 
   // Scroll reveal calls
   window.sr = ScrollReveal();
@@ -148,20 +147,20 @@
     {
       duration: 600,
       scale: 0.3,
-      distance: "0px"
+      distance: "0px",
     },
     200
   );
   sr.reveal(".sr-button", {
     duration: 1000,
-    delay: 200
+    delay: 200,
   });
   sr.reveal(
     ".sr-contact",
     {
       duration: 600,
       scale: 0.3,
-      distance: "0px"
+      distance: "0px",
     },
     300
   );
@@ -171,32 +170,30 @@
 
   $(window).scroll(function () {
     if ($(this).scrollTop() > offset) {
-      $('.gotop').fadeIn(duration);
+      $(".gotop").fadeIn(duration);
     } else {
-      $('.gotop').fadeOut(duration);
+      $(".gotop").fadeOut(duration);
     }
   });
 
-  $('.gotop').click(function (event) {
+  $(".gotop").click(function (event) {
     event.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, duration);
+    $("html, body").animate({ scrollTop: 0 }, duration);
     return false;
-  })
+  });
 
-  let clipboard = new ClipboardJS('.donation-list img');
+  let clipboard = new ClipboardJS(".donation-list img");
 
-  clipboard.on('success',(e)=>{
-    document.getElementsByClassName('alert')[0].innerHTML = `
+  clipboard.on("success", (e) => {
+    document.getElementsByClassName("alert")[0].innerHTML = `
       <i><strong>${e.text}</strong><i><br> 
       copié dans le presse-papier
     `;
     $(".alert").removeClass("in").show();
     $(".alert").delay(5000).addClass("in").fadeOut(2000);
-  })
+  });
 
-  clipboard.on('error',(e)=>{
+  clipboard.on("error", (e) => {
     console.error(`can't copy to clipboard (${e})`);
-  })
-
-
+  });
 })(jQuery); // End of use strict
