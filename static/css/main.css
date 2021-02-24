@@ -512,28 +512,22 @@ h2 {
   transition: 0.5s ease;
 }
 
-.card.epitech .overlay {
-  background-color: #3878b7;
-}
-
-.card.ynov .overlay {
-  background-color: #42ab9e;
-}
-
 .card.pld .overlay {
   background-color: #266b35;
 }
 
-.card.zenika .overlay {
-  background-color: #b21e3e;
+.card.card.unsnetwork .card-img-top {
+  background: rgb(77,211,204);
+  background: linear-gradient(315deg, rgba(77,211,204,1) 0%, rgba(28,38,137,1) 100%);
 }
 
-.card.spacelephant .overlay {
-  background-color: #530666;
+.card.unsnetwork .overlay {
+  background: rgb(77,211,204);
+  background: linear-gradient(315deg, rgba(77,211,204,1) 0%, rgba(28,38,137,1) 100%);
 }
 
-.card.unik-name .overlay {
-  background-color: #f8662e;
+.card.unikname .overlay {
+  background-color: #0F2852;
 }
 
 .card.novapuls .overlay {
