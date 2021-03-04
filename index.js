@@ -86,7 +86,7 @@ function buildEventFile(events) {
       date: formatDate(event.time),
       time: formatTime(event.time, event.duration || 10800000),
       venue: formatVenue(event.venue),
-      image: event.featured_photo?.photo_link, // has `featured_photo.highres_link` if necessary!
+      image: event.featured_photo ? event.featured_photo.photo_link : undefined, // has `featured_photo.highres_link` if necessary!
       url: event.link,
     };
   });
