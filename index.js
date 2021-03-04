@@ -3,8 +3,11 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
+/**
+ * @see https://www.meetup.com/meetup_api/docs/:urlname/events/#list
+ */
 const EVENTS_URL =
-  "https://api.meetup.com/2/events?&sign=true&photo-host=public&group_urlname=Blockchain-Societe-Nantes&status=past,upcoming&page=100";
+  "https://api.meetup.com/Blockchain-Societe-Nantes/events?fields=featured_photo&status=past,upcoming&page=100";
 const EVENT_FILE_PATH = path.join(__dirname, "data/events.json");
 const SITE_PATH = path.join(__dirname, "docs");
 
@@ -83,7 +86,8 @@ function buildEventFile(events) {
       date: formatDate(event.time),
       time: formatTime(event.time, event.duration || 10800000),
       venue: formatVenue(event.venue),
-      url: event.event_url,
+      image: event.featured_photo?.photo_link, // has `featured_photo.highres_link` if necessary!
+      url: event.link,
     };
   });
 
@@ -93,7 +97,7 @@ function buildEventFile(events) {
 console.log("Récupération des évènements depuis api.meetup.com");
 
 fetch(EVENTS_URL)
-  .then((response) => JSON.parse(response).results)
+  .then((response) => JSON.parse(response))
   .then(buildEventFile)
   .then((_) => console.log("Génération du site"))
   .then((_) => execSync(`hugo -d ${SITE_PATH}`))
