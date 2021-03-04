@@ -175,12 +175,17 @@ h2 {
 
 .section-title i {
   font-size: x-large;
-  visibility: hidden;
+  position: absolute;
+  margin-left: -35px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  opacity: 0%;
 }
 
 .section-title h2:hover i {
-  visibility: visible;
   vertical-align: middle;
+  opacity: 100%;
 }
 
 .transparent-link,
