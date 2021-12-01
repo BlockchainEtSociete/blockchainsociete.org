@@ -1,0 +1,19 @@
+<section class="bg-darker text-white" id="events">
+  <div class="container-fluid">
+    <div class="row section-head m-0">
+      <div class="col text-center section-title">
+        <h2><i class="fas fa-link"></i> Les évènements</h2>
+        <hr class="my-4" />
+      </div>
+    </div>
+    <div class="row swiper-container">
+      <div class="swiper-wrapper">
+        {{ range $.Site.Data.events }} {{ partial "event.html" . }} {{ end }}
+      </div>
+      <span class="carousel-navigation">
+        <i class="carousel-prev fas fa-caret-left"></i>
+        <i class="carousel-next fas fa-caret-right"></i>
+      </span>
+    </div>
+  </div>
+</section>

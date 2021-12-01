@@ -44,6 +44,10 @@ h6 {
   background-color: #212529 !important;
 }
 
+.bg-darker {
+  background-color: #141619;
+}
+
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -179,7 +183,7 @@ h2 {
   margin-left: -35px;
   margin-top: 20px;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   opacity: 0%;
 }
 
@@ -397,10 +401,6 @@ h2 {
   background-color: #f05f40;
 }
 
-#donation {
-  background-color: #141619;
-}
-
 #donation .donation-list {
   text-align: center;
   display: flex;
@@ -542,12 +542,20 @@ h2 {
 
 .card.card.unsnetwork .card-img-top {
   background: rgb(77, 211, 204);
-  background: linear-gradient(315deg, rgba(77, 211, 204, 1) 0%, rgba(28, 38, 137, 1) 100%);
+  background: linear-gradient(
+    315deg,
+    rgba(77, 211, 204, 1) 0%,
+    rgba(28, 38, 137, 1) 100%
+  );
 }
 
 .card.unsnetwork .overlay {
   background: rgb(77, 211, 204);
-  background: linear-gradient(315deg, rgba(77, 211, 204, 1) 0%, rgba(28, 38, 137, 1) 100%);
+  background: linear-gradient(
+    315deg,
+    rgba(77, 211, 204, 1) 0%,
+    rgba(28, 38, 137, 1) 100%
+  );
 }
 
 .card.unikname .overlay {

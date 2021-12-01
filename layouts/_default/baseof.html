@@ -1,462 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Blockchain et societe website" />
+    <meta name="author" content="Guillaume Nicolas" />
+    <meta name="theme-color" content="#414344" />
 
-<head>
+    <title>Blockchain et société</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Blockchain et societe website">
-  <meta name="author" content="Guillaume Nicolas">
-  <meta name="theme-color" content="#414344">
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
 
-  <title>Blockchain et société</title>
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/css/swiper.min.css"
+    />
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
+    <!-- Custom fonts for this template -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic"
+      rel="stylesheet"
+      type="text/css"
+    />
 
+    <!-- Custom styles for this template -->
+    <link href="./css/main.css" rel="stylesheet" />
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/css/swiper.min.css">
+    <!-- generated favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/img/favicons/safari-pinned-tab.svg"
+      color="#000000"
+    />
+    <link rel="shortcut icon" href="/img/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta
+      name="msapplication-config"
+      content="/img/favicons/browserconfig.xml"
+    />
 
-  <!-- Custom fonts for this template -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-    rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
-    rel='stylesheet' type='text/css'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-118758486-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <!-- Custom styles for this template -->
-  <link href="./css/main.css" rel="stylesheet">
+      gtag("config", "UA-118758486-1");
+    </script>
+  </head>
 
-
-  <!-- generated favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
-  <link rel="manifest" href="/img/favicons/site.webmanifest">
-  <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#000000">
-  <link rel="shortcut icon" href="/img/favicons/favicon.ico">
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118758486-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-118758486-1');
-  </script>
-
-</head>
-
-<body id="page-top">
-
-  <header id="particles" class="masthead text-center text-white d-flex">
-    <div class="container my-auto ">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <span class="logo">
-            <img src="img/meetup_logo.svg" alt="" />
-          </span>
-          <h4>Bienvenue sur le site de</h4>
-          <h1 class="text-uppercase">
-            L'association
-            <br/>
-            <strong>Blockchain et Société</strong>
-          </h1>
-          <hr>
-        </div>
-        <div class="col-lg-8 mx-auto">
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">En savoir plus</a>
+  <body id="page-top">
+    <header id="particles" class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <span class="logo">
+              <img src="img/meetup_logo.svg" alt="" />
+            </span>
+            <h4>Bienvenue sur le site de</h4>
+            <h1 class="text-uppercase">
+              L'association
+              <br />
+              <strong>Blockchain et Société</strong>
+            </h1>
+            <hr />
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#events"
+              >Nos évènements</a
+            >
+          </div>
         </div>
       </div>
+    </header>
+
+    <a href="#" class="gotop">
+      <i class="fas fa-angle-double-up"></i>
+    </a>
+
+    {{ partial "home-events.html" . }}
+    {{ partial "home-team.html" . }}
+    {{ partial "home-partners.html" . }}
+    {{ partial "home-donation.html" . }}
+    {{ partial "home-networks.html" . }}
+    {{ partial "home-about.html" . }}
+
+    <footer class="container-fluid">
+      <div class="mx-auto text-center">
+        Homemade with
+        <span class="fa fa-heart mx-1"></span>
+        <a
+          href="https://github.com/BlockchainEtSociete/blockchainsociete.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          by ourselves
+        </a>
+      </div>
+      <hr />
+      <div class="mx-auto text-center">
+        Blockchain et Société,
+        <a
+          href="https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20180008/763"
+          target="_blank"
+          rel="noopener noreferrer"
+          >association loi 1901</a
+        >
+      </div>
+      <div class="mx-auto text-center mt-1">
+        16 rue Maurice Daniel, 44200 Nantes
+      </div>
+      <div class="mx-auto text-center mt-1">
+        Directeur de la publication : Damien Lecan
+      </div>
+      <div class="mx-auto text-center mt-1">
+        Site hébergé par Netlify, Inc., San Francisco, California
+      </div>
+    </footer>
+
+    <div class="alert-container">
+      <div class="alert alert-success" role="alert"></div>
     </div>
-  </header>
 
-  <a href="#" class="gotop">
-    <i class="fas fa-angle-double-up"></i>
-  </a>
+    <!-- Boostrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
 
-  <section id="about">
-    <div class="container my-auto">
-      <div class="row">
-        <div class="col-lg-12 text-center section-title">
-          <h2>
-            <i class="fas fa-link"></i> Notre vision</h2>
-          <hr class="my-4">
-        </div>
-      </div>
-      <div class="row">
-        <p>
-          Notre association a pour objet de faire découvrir la thématique de la blockchain et des Distributed Ledger Technologies au
-          grand public comme aux technophiles et de rassembler tous les acteurs intéressés pour créer une dynamique Nantaise
-          sur le sujet.
-        </p>
-        <p>
-          A ce titre, nous organisons des meetups Blockchain et Société composés de deux tracks principales :
-        </p>
-      </div>
-      <div class="row text-center tracks">
-        <div class="col-lg-6">
-          <div class="track tech shadow-lg p-3 bg-white rounded">
-            <div class="head">
-              <h3>Technologies</h3>
-            </div>
-            <hr>
-            <p class="body">
-              Durant ces sessions, nous parlons des DLTs et de leurs cas d'usage, avec des conférences parfois vulgarisées, parfois techniques
-              et souvent les deux à la fois !
-              <br/> Nous organisons également des ateliers pour travailler et réfléchir ensemble sur les innombrables possibilités
-              qu'offrent les technologies décentralisées.
-            </p>
-          </div>
-        </div>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
-        <div class="col-lg-6 ">
-          <div class="track crypto shadow-lg p-3 bg-white rounded">
-            <div class="head">
-              <i class="fab fa-bitcoin"></i>
-              <h3>Cryptomonnaies</h3>
-            </div>
-            <hr>
-            <p class="body">
-              Ces sessions ont pour objectif de réunir les cryptomaniacs Nantais afin d'échanger sur l'actualité, les bons plans et les
-              techniques de trading.
-              <br/> Nous avons également mis en place un
-              <a href="https://www.cryptocompare.com/portfolio-public/?id=340348" target="_blank" rel="noopener noreferrer" class="transparent-link">portefeuille d'investissement</a> commun 100 % virtuel, que nous gérons de semaine en semaine.
-              <br/>Régulièrement, nous permettons aux néophytes de correctement s'intégrer en reprenant les bases.
-              <br/>
-              <a href="https://www.cryptocompare.com/portfolio-public/?id=340348" target="_blank" rel="noopener noreferrer">
-                <span class="fa-stack fa-2x wallet-icon" data-toggle="tooltip" title="Lien vers le portefeuille virtuel">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fas fa-wallet fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-  </section>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/js/swiper.min.js"></script>
 
+    <!-- ClipboardJS -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
 
-  <section class="bg-dark text-white" id="events">
-    <div class="container-fluid">
-      <div class="row section-head m-0">
-          <div class="col text-center section-title">
-              <h2>
-                <i class="fas fa-link"></i> Les évènements</h2>
-              <hr class="my-4">
-            </div>
-      </div>
-      <div class="row swiper-container">
-        <div class="swiper-wrapper">
-            {{ range $.Site.Data.events }}
-                {{ partial "event.html" . }}
-            {{ end }}
-        </div>
-        <span class="carousel-navigation">
-          <i class="carousel-prev fas fa-caret-left"></i>
-          <i class="carousel-next fas fa-caret-right"></i>
-        </span>
-      </div>
-    </div>
-  </section>
+    <!-- Custom scripts for this template -->
+    <script src="./js/main.js"></script>
 
-  <section class="bg-primary" id="team">
-    <div class="container">
-      <div class="row section-head">
-        <div class="col text-center section-title">
-          <h2 class="text-white">
-            <i class="fas fa-link"></i>
-            Les membres de l'association</h2>
-          <hr class="light my-4">
-        </div>
-      </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-      <div class="row team-list">
-
-        <div class="card">
-          <img class="card-img-top rounded-circle" src="./img/team/dle.jpg">
-          <div class="card-body">
-            <p class="card-text">Damien LECAN</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img-top rounded-circle" src="./img/team/gni.jpg">
-          <div class="card-body">
-            <p class="card-text">Guillaume NICOLAS</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img-top rounded-circle" src="./img/team/llo.jpg">
-          <div class="card-body">
-            <p class="card-text">Laurent LOURENÇO</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img-top rounded-circle" src="./img/team/anonymous.png">
-          <div class="card-body">
-            <p class="card-text">Bertrand Presles</p>
-          </div>
-        </div>
-
-        <div class="w-100"></div>
-
-        <div class="card">
-          <img class="card-img-top rounded-circle" src="./img/team/ala.jpg">
-          <div class="card-body">
-            <p class="card-text">Adrien LASSELLE</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img-top rounded-circle" src="./img/team/nla.jpg">
-          <div class="card-body">
-            <p class="card-text">Nicolas LAUNAY</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img-top rounded-circle" src="./img/team/rle.jpg">
-          <div class="card-body">
-            <p class="card-text">Rachel LE TROTTER</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img-top rounded-circle" src="./img/team/lme.jpg">
-          <div class="card-body">
-            <p class="card-text">Laure MERLIN</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-dark" id="partners">
-    <div class="container">
-      <div class="row section-head">
-        <div class="col text-center section-title">
-          <h2 class="text-white">
-            <i class="fas fa-link"></i>
-            Ils nous soutiennent</h2>
-          <hr class="light my-4">
-        </div>
-      </div>
-
-      <div class="row partner-list">
-
-        <div class="card novapuls">
-          <a href="https://novapuls.fr/" target="_blank" rel="noopener noreferrer">
-            <img class="card-img-top" src="./img/partner/novapuls.png">
-            <div class="overlay rounded-circle">
-              <p class="text">Novapuls</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="card pld">
-          <a href="https://www.paysdelaloire.fr/les-aides/pays-de-la-loire-developpement" target="_blank" rel="noopener noreferrer">
-            <img class="card-img-top" src="./img/partner/pld.png">
-            <div class="overlay rounded-circle">
-              <p class="text">Pays de la Loire Dévelopment</p>
-            </div>
-          </a>
-        </div>
-    </div>
-  </section>
-
-  <section class="bg" id="donation">
-      <div class="container">
-        <div class="row section-head">
-          <div class="col text-center section-title">
-            <h2 class="text-white">
-              <i class="fas fa-link"></i>
-              Soutenez nous</h2>
-            <hr class="light my-4">
-          </div>
-        </div>
-      </div>
-
-      <div class="donation-list">
-        <img src="./img/donations/g1.png" data-clipboard-text="9zYLSQFo6rTWweSBmPGQvPxmtCo3xpYw7qXmV9ie9omw">
-        <img src="./img/donations/ark.png" data-clipboard-text="ASSRvwixbSmMGjWuJYnEtAdEiErM7acTZR">
-        <img src="./img/donations/eth.png" data-clipboard-text="0xe5D08beA03e776B54508CF96db99745Cd464140D">
-        <img src="./img/donations/btc.png" data-clipboard-text="3E8kKYXZEuwnHmWz9VQhksFN5f65WQ5PWp">
-        <img src="./img/donations/fiat.png" data-clipboard-text="bit.ly/don-bets">
-      </div>
-
-    </section>
-
-  <section id="networks">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center section-title">
-          <h2 class="section-heading">
-            <i class="fas fa-link"></i>
-            Retrouvez nous sur</h2>
-          <hr class="my-4">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="network-box mt-5 mx-auto">
-            <a href="https://join.slack.com/t/meetup-blockchain/shared_invite/enQtMzAwOTA5MDI1Njk3LTg2NGJkNTlkYWY0Njc0YzlkMWMxZmVjZmFiOGI2YTE3M2RlMGMzNzdlYzUyYmNhOTJiZGFjYjY4ODQ5NTAwY2I"
-              target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-4x fa-slack text-primary mb-3 icons"></i>
-              <h3 class="mb-3">
-                Notre groupe
-                <br/>
-                <strong>Slack</strong>
-              </h3>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="network-box mt-5 mx-auto">
-            <a href="https://twitter.com/Blockchain44" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-4x fa-twitter text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">
-                Notre fil
-                <br/>
-                <strong>Twitter</strong>
-              </h3>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="network-box mt-5 mx-auto">
-            <a href="https://github.com/BlockchainEtSociete" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-4x fa-github text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">
-                Nos projets
-                <br/>
-                <strong>Github</strong>
-              </h3>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="network-box mt-5 mx-auto">
-            <a href="https://www.meetup.com/Blockchain-Societe-Nantes" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-4x fa-meetup text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">
-                Notre groupe
-                <br/>
-                <strong>Meetup</strong>
-              </h3>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 text-center">
-          <div class="network-box mt-5 mx-auto">
-            <a href="mailto:contact@blockchainsociete.org">
-              <i class="fas fa-4x fa-envelope text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">
-                Notre email
-                <br/>
-                <strong>de contact</strong>
-              </h3>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center">
-          <div class="network-box mt-5 mx-auto">
-            <a href="https://www.facebook.com/groups/822513524759506/" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-4x fa-facebook-f text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">
-                Notre groupe
-                <br/>
-                <strong>Facebook</strong>
-              </h3>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center">
-          <div class="network-box mt-5 mx-auto">
-            <a href="https://www.linkedin.com/company/blockchain-et-societe" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-4x fa-linkedin text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">
-                Notre page
-                <br/>
-                <strong>Linkedin</strong>
-              </h3>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="container-fluid">
-    <div class="mx-auto text-center">
-      Homemade with
-      <span class="fa fa-heart mx-1"></span>
-      <a href="https://github.com/BlockchainEtSociete/blockchainsociete.org" target="_blank" rel="noopener noreferrer">
-        by ourselves
-      </a>
-    </div>
-    <hr>
-    <div class="mx-auto text-center">
-      Blockchain et Société, <a href="https://www.journal-officiel.gouv.fr/associations/detail-annonce/associations_b/20180008/763" target="_blank" rel="noopener noreferrer">association loi 1901</a>
-    </div>
-    <div class="mx-auto text-center mt-1">
-      16 rue Maurice Daniel, 44200 Nantes
-    </div>
-    <div class="mx-auto text-center mt-1">
-      Directeur de la publication : Damien Lecan
-    </div>
-    <div class="mx-auto text-center mt-1">
-      Site hébergé par Netlify, Inc., San Francisco, California
-    </div>
-  </footer>
-
-  <div class="alert-container">
-    <div class="alert alert-success" role="alert"></div>
-  </div>
-
-
-  <!-- Boostrap -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
-  <!-- Swiper -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@4.4.6/dist/js/swiper.min.js"></script>
-
-  <!-- ClipboardJS -->
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="./js/main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <script type="text/javascript">
-    particlesJS.load('particles', './assets/particles.json', function () {
-      console.log('callback - particles.js config loaded');
-    });
-  </script>
-
-</body>
-
+    <script type="text/javascript">
+      particlesJS.load("particles", "./assets/particles.json", function () {
+        console.log("callback - particles.js config loaded");
+      });
+    </script>
+  </body>
 </html>
-
