@@ -8,7 +8,7 @@ const { execSync } = require("child_process");
  */
 const EVENTS_URL =
   "https://api.meetup.com/Blockchain-Societe-Nantes/events?fields=featured_photo&status=past,upcoming&page=100";
-const EVENT_FILE_PATH = path.join(__dirname, "data/events.json");
+const EVENT_FILE_PATH = path.join(__dirname, "data", "events.json");
 const SITE_PATH = path.join(__dirname, "docs");
 
 function formatDate(timestamp) {
@@ -91,6 +91,7 @@ function buildEventFile(events) {
     };
   });
 
+  fs.mkdirSync(path.parse(EVENT_FILE_PATH).dir, { recursive: true });
   fs.writeFileSync(EVENT_FILE_PATH, JSON.stringify(output));
 }
 
