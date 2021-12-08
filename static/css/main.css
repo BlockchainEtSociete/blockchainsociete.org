@@ -492,6 +492,10 @@ h2 {
   color: #e0393e !important;
 }
 
+.network-box:hover .fa-youtube {
+  color: #ff0000 !important;
+}
+
 .network-box:hover .fa-envelope {
   color: gray !important;
 }
