@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "fetch-events": "node scripts/index.js",
     "start": "hugo --gc",
     "dev": "hugo server --disableFastRender",
     "build": "NODE_ENV=production hugo --gc"

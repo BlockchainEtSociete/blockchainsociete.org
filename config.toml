@@ -6,6 +6,9 @@ theme = "blist"
 
 DefaultContentLanguage = "fr"
 DefaultContentLanguageInSubdir = true
+
+publishDir = "docs"
+
 [languages]
   [languages.fr]
     contentDir = "content/fr"
@@ -15,6 +18,7 @@ DefaultContentLanguageInSubdir = true
       introTitle = "Blockchain et Societe"
       introSubtitle = "Le site officiel de l'association crypto et blockchain"
       introPhoto = "/picture.jpg"
+    
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
@@ -28,10 +32,19 @@ DefaultContentLanguageInSubdir = true
     [languages.fr.params.homepage.team]
         title = "Nos membres"
 
+    [languages.fr.params.homepage.events]
+        title = "Les derniers évènements"
+        allBtn = "Tous les évènements"
+        
+    [languages.fr.params.homepage.posts]
+        title = "Les derniers billets"
+        
     [languages.fr.params.homepage.social]
         title = "Rejoignez-nous"
         description = "Échangez avec la communauté en direct, suivez nos actualités et inscrivez-vous à nos futurs évènements"
     
+    [languages.fr.params.components.eventCard]
+        infoBtn = "Plus d'info"
 
 
 [params]
