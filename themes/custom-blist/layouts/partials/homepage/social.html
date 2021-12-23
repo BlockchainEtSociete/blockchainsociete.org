@@ -1,0 +1,344 @@
+<section id="socials" class="{{ .Site.Params.ascentColor }} dark:bg-black-400">
+  <div
+    class="
+      container
+      px-6
+      py-12
+      mx-auto
+      max-w-4xl
+      flex flex-row flex-wrap
+      gap-8
+      items-center
+      justify-center
+    "
+  >
+    <div class="max-w-xs">
+      <div class="text-2xl font-bold mb-2">
+        {{ .Site.Params.homepage.social.title }}
+      </div>
+      <p class="opacity-60">{{ .Site.Params.homepage.social.description }}</p>
+    </div>
+    <ul class="flex justify-center gap-4">
+      {{ with .Site.Params.social.twitter }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="Twitter"
+          class="
+            p-2
+            inline-block
+            rounded-full
+            border border-transparent
+            text-gray-500
+            hover:text-gray-800 hover:border-gray-800
+            cursor-pointer
+            transition-colors
+            dark:text-white
+            dark:hover:border-gray-300
+            dark:hover:text-gray-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+            />
+          </svg>
+        </a>
+      </li>
+      {{ end }} {{ with .Site.Params.social.slack }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="Slack"
+          class="
+            p-2
+            inline-block
+            rounded-full
+            border border-transparent
+            text-gray-500
+            hover:text-gray-800 hover:border-gray-800
+            cursor-pointer
+            transition-colors
+            dark:text-white
+            dark:hover:border-gray-300
+            dark:hover:text-gray-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-slack"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12v-6a2 2 0 0 1 4 0v6m0 -2a2 2 0 1 1 2 2h-6"></path>
+            <path d="M12 12h6a2 2 0 0 1 0 4h-6m2 0a2 2 0 1 1 -2 2v-6"></path>
+            <path d="M12 12v6a2 2 0 0 1 -4 0v-6m0 2a2 2 0 1 1 -2 -2h6"></path>
+            <path d="M12 12h-6a2 2 0 0 1 0 -4h6m-2 0a2 2 0 1 1 2 -2v6"></path>
+          </svg>
+        </a>
+      </li>
+      {{ end }} {{ with .Site.Params.social.github }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          class="
+            p-2
+            inline-block
+            rounded-full
+            border border-transparent
+            text-gray-500
+            hover:text-gray-800 hover:border-gray-800
+            cursor-pointer
+            transition-colors
+            dark:text-white
+            dark:hover:border-gray-300
+            dark:hover:text-gray-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+            />
+          </svg>
+        </a>
+      </li>
+      {{ end }} {{ with .Site.Params.social.meetup }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="Meetup"
+          class="
+            p-2
+            inline-block
+            rounded-full
+            border border-transparent
+            text-gray-500
+            hover:text-gray-800 hover:border-gray-800
+            cursor-pointer
+            transition-colors
+            dark:text-white
+            dark:hover:border-gray-300
+            dark:hover:text-gray-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M23.843 21.123C23.5535 18.8808 20.1297 20.6099 19.9184 18.1533C19.6193 14.6674 23.8939 7.15459 23.5565 4.23802C23.2536 1.61236 21.7944 1.06225 20.5249 1.03522C19.2916 1.00819 18.9658 1.24666 18.5489 1.54062C18.3083 1.70959 17.9628 2.04449 17.483 1.49124C17.1642 1.12321 16.9536 0.865527 16.6163 0.53916C16.4445 0.37243 16.1709 0.162602 15.7126 0.080808C15.2538 -0.000985864 14.6601 0.0808079 14.2828 0.276808C13.9048 0.473526 13.6082 0.816864 13.2976 1.14404C12.9877 1.47121 12.2005 2.53983 11.4668 2.1455C11.1486 1.97509 10.0712 1.32226 9.29353 0.9141C7.79236 0.126329 5.62734 1.40253 4.84786 3.08303C3.68773 5.5829 1.39738 15.405 1.05057 16.7005C0.272936 19.6093 2.0363 21.9805 4.41444 21.8438C5.41992 21.7859 6.08874 21.3407 6.72388 19.9403C7.09105 19.1317 10.5389 8.21162 10.7954 7.68773C10.9812 7.30812 11.6016 6.80658 12.128 7.13376C12.6536 7.46093 12.7586 8.14294 12.681 8.7857C12.5549 9.82496 10.1234 16.4867 10.0299 17.2405C9.87137 18.522 10.3735 19.2351 11.4706 19.3044C12.2228 19.3531 12.9718 19.0252 13.5668 17.6649C13.8996 16.904 17.7344 7.59193 18.0736 6.97008C18.4465 6.28799 18.7464 6.06352 19.1262 6.0874C19.4208 6.10518 19.8925 6.19694 19.7747 7.26789C19.6589 8.31802 16.5757 15.1511 16.2524 16.8245C15.8197 19.0613 16.8321 21.3267 18.5001 22.3182C19.5641 22.9501 24.2185 24.0334 23.843 21.123Z"
+            />
+            <path
+              d="M23.843 21.123C23.5535 18.8808 20.1297 20.6099 19.9184 18.1533C19.6193 14.6674 23.8939 7.15459 23.5565 4.23802C23.2536 1.61236 21.7944 1.06225 20.5249 1.03522C19.2916 1.00819 18.9658 1.24666 18.5489 1.54062C18.3083 1.70959 17.9628 2.04449 17.483 1.49124C17.1642 1.12321 16.9536 0.865527 16.6163 0.53916C16.4445 0.37243 16.1709 0.162602 15.7126 0.080808C15.2538 -0.000985864 14.6601 0.0808079 14.2828 0.276808C13.9048 0.473526 13.6082 0.816864 13.2976 1.14404C12.9877 1.47121 12.2005 2.53983 11.4668 2.1455C11.1486 1.97509 10.0712 1.32226 9.29353 0.9141C7.79236 0.126329 5.62734 1.40253 4.84786 3.08303C3.68773 5.5829 1.39738 15.405 1.05057 16.7005C0.272936 19.6093 2.0363 21.9805 4.41444 21.8438C5.41992 21.7859 6.08874 21.3407 6.72388 19.9403C7.09105 19.1317 10.5389 8.21162 10.7954 7.68773C10.9812 7.30812 11.6016 6.80658 12.128 7.13376C12.6536 7.46093 12.7586 8.14294 12.681 8.7857C12.5549 9.82496 10.1234 16.4867 10.0299 17.2405C9.87137 18.522 10.3735 19.2351 11.4706 19.3044C12.2228 19.3531 12.9718 19.0252 13.5668 17.6649C13.8996 16.904 17.7344 7.59193 18.0736 6.97008C18.4465 6.28799 18.7464 6.06352 19.1262 6.0874C19.4208 6.10518 19.8925 6.19694 19.7747 7.26789C19.6589 8.31802 16.5757 15.1511 16.2524 16.8245C15.8197 19.0613 16.8321 21.3267 18.5001 22.3182C19.5641 22.9501 24.2185 24.0334 23.843 21.123Z"
+            />
+          </svg>
+        </a>
+      </li>
+      {{ end }} {{ with .Site.Params.social.youtube }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="YouTube"
+          class="
+            p-2
+            inline-block
+            rounded-full
+            border border-transparent
+            text-gray-500
+            hover:text-gray-800 hover:border-gray-800
+            cursor-pointer
+            transition-colors
+            dark:text-white
+            dark:hover:border-gray-300
+            dark:hover:text-gray-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-youtube"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="9" />
+            <path d="M10 9l5 3l-5 3z" />
+          </svg>
+        </a>
+      </li>
+      {{ end }} {{ with .Site.Params.social.email }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="Email"
+          class="
+            p-2
+            inline-block
+            rounded-full
+            border border-transparent
+            text-gray-500
+            hover:text-gray-800 hover:border-gray-800
+            cursor-pointer
+            transition-colors
+            dark:text-white
+            dark:hover:border-gray-300
+            dark:hover:text-gray-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-mail"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <polyline points="3 7 12 13 21 7"></polyline>
+          </svg>
+        </a>
+      </li>
+      {{ end }} {{ with .Site.Params.social.facebook }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+          class="
+            p-2
+            inline-block
+            rounded-full
+            border border-transparent
+            text-gray-500
+            hover:text-gray-800 hover:border-gray-800
+            cursor-pointer
+            transition-colors
+            dark:text-white
+            dark:hover:border-gray-300
+            dark:hover:text-gray-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-facebook"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+            ></path>
+          </svg>
+        </a>
+      </li>
+      {{ end }} {{ with .Site.Params.social.linkedin }}
+      <li>
+        <a
+          href="{{.}}"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          class="
+            p-2
+            inline-block
+            rounded-full
+            border border-transparent
+            text-gray-500
+            hover:text-gray-800 hover:border-gray-800
+            cursor-pointer
+            transition-colors
+            dark:text-white
+            dark:hover:border-gray-300
+            dark:hover:text-gray-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
