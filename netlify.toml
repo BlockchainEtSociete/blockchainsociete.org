@@ -1,6 +1,8 @@
 [context.v2]
   publish = "docs"
-  command = "yarn build"
+  command = "yarn fetch-events && yarn build"
 
 [context.v2.environment]
-  HUGO_VERSION = "0.90.1+extended"
+  HUGO_VERSION = "0.90.1"
+  NODE_VERSION = "12"
+  NETLIFY_USE_YARN = "true"
