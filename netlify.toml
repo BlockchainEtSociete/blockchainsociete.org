@@ -1,0 +1,6 @@
+[context.v2]
+  publish = "docs"
+  command = "yarn build"
+
+[context.v2.environment]
+  HUGO_VERSION = "0.90.1+extended"
