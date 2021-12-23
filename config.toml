@@ -47,6 +47,9 @@ contentDir = "content"
     [languages.fr.params.components.eventCard]
         infoBtn = "Plus d'info"
 
+    [languages.fr.params.pages.events]
+        title = "Les évènements"
+        subtitle = "Retrouvez ici tous les évènements organisés par l'association Blockchain et Société depuis sa création en 2016."
 
 [params]
   darkModeToggle = true
