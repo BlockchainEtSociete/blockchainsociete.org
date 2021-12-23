@@ -1,13 +1,14 @@
 baseURL = 'http://example.org/'
 languageCode = 'fr-fr'
 title = 'B&S'
-theme = "blist"
+theme = "custom-blist"
 
 
 DefaultContentLanguage = "fr"
 DefaultContentLanguageInSubdir = true
 
 publishDir = "docs"
+contentDir = "content"
 
 [languages]
   [languages.fr]
@@ -25,8 +26,8 @@ publishDir = "docs"
         weight = 1
 
     [[languages.fr.menu.main]]
-        name = "About"
-        url = "page/about/"
+        name = "Évènements"
+        url = "events/"
         weight = 2
     
     [languages.fr.params.homepage.team]
