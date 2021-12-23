@@ -58,7 +58,7 @@ contentDir = "content"
   # enableSearch = true
 
   # Custom copyright - optional
-  # copyright = "Copyright © 2021 - Katheryn Fox · All rights reserved"
+  copyright = "Copyright © 2021 - Blockchain et Société, association loi 1901 - 16 rue Maurice Daniel, 44200 Nantes - Directeur de la publication : Damien Lecan - Site hébergé par Netlify, Inc., San Francisco California"
   favicon = "/favicon.svg"
 
   # Color for the intro details and social links block, not applicable for dark mode
@@ -76,3 +76,13 @@ contentDir = "content"
   email = "mailto:contact@blockchainsociete.org"
   facebook = "https://www.facebook.com/groups/822513524759506/"
   linkedin = "https://www.linkedin.com/company/blockchain-et-societe"
+
+
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true
