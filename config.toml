@@ -19,7 +19,7 @@ contentDir = "content"
       introTitle = "Blockchain et Societe"
       introSubtitle = "Le site officiel de l'association crypto et blockchain"
       introPhoto = "/picture.jpg"
-    
+
     [[languages.fr.menu.main]]
         name = "Blog"
         url = "blog"
@@ -29,21 +29,21 @@ contentDir = "content"
         name = "Évènements"
         url = "events/"
         weight = 2
-    
+
     [languages.fr.params.homepage.team]
         title = "Nos membres"
 
     [languages.fr.params.homepage.events]
         title = "Les derniers évènements"
         allBtn = "Tous les évènements"
-        
+
     [languages.fr.params.homepage.posts]
         title = "Les derniers billets"
-        
+
     [languages.fr.params.homepage.social]
         title = "Rejoignez-nous"
         description = "Échangez avec la communauté en direct, suivez nos actualités et inscrivez-vous à nos futurs évènements"
-    
+
     [languages.fr.params.components.eventCard]
         infoBtn = "Plus d'info"
 
@@ -53,7 +53,7 @@ contentDir = "content"
 
 [params]
   darkModeToggle = true
-  
+
   # Enable search in header
   # enableSearch = true
 
@@ -71,7 +71,7 @@ contentDir = "content"
   twitter = "https://twitter.com/Blockchain44"
   slack = "https://join.slack.com/t/meetup-blockchain/shared_invite/zt-3u8hgq75-hkvVna9GdMnRwf7Pq4tqFw"
   github = "https://github.com/BlockchainEtSociete"
-  meetup = "https://www.meetup.com/Blockchain-Societe-Nantes"
+  meetup = "https://www.meetup.com/fr-FR/Blockchain-Societe/"
   youtube = "https://www.youtube.com/channel/UCLxvA3g5oqdItCMvO6Scfhg"
   email = "mailto:contact@blockchainsociete.org"
   facebook = "https://www.facebook.com/groups/822513524759506/"
