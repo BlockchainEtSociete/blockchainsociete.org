@@ -1,4 +1,3 @@
-baseURL = 'https://v2--blockchainetsociete.netlify.app/'
 languageCode = 'fr-fr'
 title = 'B&S'
 theme = "custom-blist"
