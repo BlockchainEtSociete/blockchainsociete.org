@@ -1,0 +1,116 @@
+<section id="supports">
+  <div
+    class="
+      container
+      px-6
+      py-12
+      mx-auto
+      flex flex-col
+      gap-8
+      items-center
+      justify-center
+    "
+  >
+    <div class="flex flex-col items-center">
+      <div class="text-4xl font-extrabold mb-3">Nos sponsors</div>
+      <div class="rounded bg-black-900 dark:bg-white h-2 w-16"></div>
+    </div>
+    <div class="text-lg text-normal text-center mb-3 max-w-xl">
+      Notre association à but non lucratif est sponsorisée par plusieurs acteurs
+      investis dans l'écosystème blockchain.
+    </div>
+    <div class="grid md:grid-cols-2 grid-cols-none gap-10 items-start">
+      <div class="max-w-xl flex flex-col gap-6 justify-center">
+        <div class="text-md opacity-60 text-center">
+          Ces sponsors long-terme nous permettent d'ouvrir les portes de
+          certains lieux de rencontre, d'accueillir des intervenants variés
+          ainsi que de partager un moment de convivialité et d'échanges après
+          les conférences.
+        </div>
+        <div class="flex flex-row flex-wrap gap-10 items-center justify-center">
+          <a
+            href="https://novapuls.fr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="
+                transition
+                duration-500
+                ease-in-out
+                w-28
+                transform
+                hover:-translate-y-1 hover:scale-110
+              "
+              src="images/partner/novapuls.png"
+              alt="Novapuls"
+            />
+          </a>
+          <a
+            href="https://www.paysdelaloire.fr/les-aides/pays-de-la-loire-developpement"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="
+                transition
+                duration-500
+                ease-in-out
+                w-28
+                transform
+                hover:-translate-y-1 hover:scale-110
+              "
+              src="images/partner/pld.png"
+              alt="Pays de La Loire Developement"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="max-w-xl flex flex-col gap-6 justify-center">
+        <div class="text-md opacity-60 text-center">
+          Si vous aimez nos actions, n'hésitez pas à soutenir notre association
+          ou à financer une soirée.
+        </div>
+        <div class="flex flex-row flex-wrap gap-3 items-center justify-center">
+          <a
+            href="https://explorer.ark.io/wallets/ASSRvwixbSmMGjWuJYnEtAdEiErM7acTZR"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ partial "partials/components/button" (dict "label" "ARK" "color"
+            "red" ) }}
+          </a>
+          <a
+            href="https://www.blockchain.com/btc/address/3E8kKYXZEuwnHmWz9VQhksFN5f65WQ5PWp"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ partial "partials/components/button" (dict "label" "BTC" "color"
+            "yellow" ) }}
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="9zYLSQFo6rTWweSBmPGQvPxmtCo3xpYw7qXmV9ie9omw"
+          >
+            {{ partial "partials/components/button" (dict "label" "Ğ1" "color"
+            "blue" ) }}</a
+          ><a
+            href="https://etherscan.io/address/0xe5D08beA03e776B54508CF96db99745Cd464140D"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ partial "partials/components/button" (dict "label" "ETHER"
+            "color" "gray" ) }}</a
+          ><a
+            href="https://bit.ly/don-bets"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ partial "partials/components/button" (dict "label" "EURO" "color"
+            "green" ) }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
