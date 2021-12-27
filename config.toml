@@ -51,13 +51,18 @@ contentDir = "content"
         subtitle = "Retrouvez ici tous les évènements organisés par l'association Blockchain et Société depuis sa création en 2016."
 
 [params]
+
+  # For opengraph and twitter card plugins
+  title = 'Blockchain et Société'
+  description = 'Blockchain et Société site officiel'
+  images = ['images/opengraph.png']
+
   darkModeToggle = true
 
   # Enable search in header
   # enableSearch = true
 
   # Custom copyright - optional
-  copyright = "Copyright © 2021 - Blockchain et Société, association loi 1901 - 16 rue Maurice Daniel, 44200 Nantes - Directeur de la publication : Damien Lecan - Site hébergé par Netlify, Inc., San Francisco California"
   favicon = "/favicon.svg"
 
   # Color for the intro details and social links block, not applicable for dark mode
