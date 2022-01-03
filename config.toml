@@ -9,6 +9,8 @@ DefaultContentLanguageInSubdir = true
 publishDir = "docs"
 contentDir = "content"
 
+enableEmoji = true
+
 [languages]
   [languages.fr]
     contentDir = "content/fr"
