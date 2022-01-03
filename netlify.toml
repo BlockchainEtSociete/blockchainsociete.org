@@ -11,4 +11,4 @@
   command = "HUGO_BASEURL=$DEPLOY_PRIME_URL yarn fetch-events && yarn build"
 
 [context.branch-deploy]
-  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL yarn fetch-events && yarn build --buildDrafts"
+  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL yarn fetch-events && yarn build --buildDrafts --buildFuture"
