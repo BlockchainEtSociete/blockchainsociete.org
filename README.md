@@ -6,20 +6,41 @@ La section évènements est générée à partir d'un template hugo dans lequel 
 
 ## Prérequis
 
-- NodeJS >= 6
+- NodeJS >= 12
 - Yarn ou NPM
+- Optionnel, car téléchargé par le script d'install : Hugo extended >= 0.91
 
-## Générer le site
-
-Hugo est automatiquement téléchargé et installé dans le répertoire `node_modules`.
-
-Une fois les données récupérées, le site est généré dans le répertoire [`/docs`](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch).
+## Développer le site
 
 ### Avec Yarn
 
 
 ```bash
 $ yarn
+$ yarn fetch-events
+$ yarn dev
+```
+
+### Avec NPM
+
+```bash
+$ npm -i
+$ npm run fetch-events
+$ npm run dev
+```
+
+## Générer le site
+
+Hugo est automatiquement téléchargé et installé dans le répertoire `node_modules/.bin`.
+
+Une fois les données récupérées (avec le script `fetch-events`), le site est généré dans le répertoire `/docs`.
+
+### Avec Yarn
+
+
+```bash
+$ yarn
+$ yarn fetch-events
 $ yarn build
 ```
 
@@ -27,5 +48,6 @@ $ yarn build
 
 ```bash
 $ npm -i
+$ npm run fetch-events
 $ npm build
 ```
