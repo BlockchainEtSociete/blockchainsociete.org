@@ -11,6 +11,8 @@ contentDir = "content"
 
 enableEmoji = true
 
+enableRobotsTXT = true
+
 [languages]
   [languages.fr]
     contentDir = "content/fr"
