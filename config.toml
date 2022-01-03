@@ -13,6 +13,9 @@ enableEmoji = true
 
 enableRobotsTXT = true
 
+[permalinks]
+  blog = '/:slug/'
+
 [languages]
   [languages.fr]
     contentDir = "content/fr"
