@@ -1,4 +1,4 @@
 ---
 author: Nigui
-title: Les articles de blog
+title: Le blog de Blockchain et Société
 ---
