@@ -13,9 +13,12 @@
     "
   >
     <div class="flex flex-col items-center">
-      <div class="text-4xl font-extrabold mb-3">
-        {{ i18n "homePostsTitle" }}
-      </div>
+      {{ partial "components/section-title"
+      (dict
+      "title" (i18n "homePostsTitle")
+      "anchor" "posts"
+      "margin" "mb-3"
+      "fontSize" "text-4xl" ) }}
       <div class="rounded bg-black-900 dark:bg-white h-2 w-16 mb-2"></div>
     </div>
     <div class="flex flex-row flex-wrap gap-11 justify-center"></div>

@@ -3,7 +3,12 @@
     class="container px-6 py-12 mx-auto max-w-4xl flex flex-col gap-8 items-center justify-center"
   >
     <div class="flex flex-col items-center">
-      <div class="text-4xl font-extrabold mb-3">{{ i18n "homeTeamTitle" }}</div>
+      {{ partial "components/section-title"
+      (dict 
+      "title" (i18n "homeTeamTitle")
+      "anchor" "team"
+      "margin" "mb-3"
+      "fontSize" "text-4xl" ) }}
       <div class="rounded bg-black-900 dark:bg-white h-2 w-16"></div>
     </div>
     <div class="text-lg text-normal text-center mb-3 underline-links">
