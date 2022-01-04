@@ -3,6 +3,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.section-title:hover .section-link-icon, .section-link-icon:hover {
+  visibility: visible !important;
+}
+
 /* Fonts */
 
 /* inter-300 - latin */
