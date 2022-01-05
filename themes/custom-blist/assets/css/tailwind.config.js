@@ -40,6 +40,27 @@ module.exports = {
         },
       },
       typography: (theme) => ({
+        DEFAULT: {
+          css: [
+            {
+              a: {
+                color: "inherit",
+              },
+              "ul > li::before": {
+                backgroundColor: theme("colors.gray.500"),
+              },
+              code: {
+                fontWeight: "normal",
+                backgroundColor: theme("colors.gray.200"),
+                padding: "0.2em 0.4em",
+                margin: 0,
+                borderRadius: "6px",
+              },
+              "code::before": { content: "&nbsp;" },
+              "code::after": { content: "&nbsp;" },
+            },
+          ],
+        },
         dark: {
           css: [
             {
@@ -48,7 +69,7 @@ module.exports = {
                 color: theme("colors.gray.300"),
               },
               a: {
-                color: theme("colors.white"),
+                // color: theme("colors.white"),
               },
               strong: {
                 color: theme("colors.white"),
@@ -57,7 +78,7 @@ module.exports = {
                 color: theme("colors.gray.400"),
               },
               "ul > li::before": {
-                backgroundColor: theme("colors.gray.600"),
+                backgroundColor: theme("colors.gray.400"),
               },
               hr: {
                 borderColor: theme("colors.gray.200"),
@@ -82,7 +103,8 @@ module.exports = {
                 color: theme("colors.gray.400"),
               },
               code: {
-                color: theme("colors.white"),
+                color: "inherit",
+                backgroundColor: theme("colors.gray.800"),
               },
               "a code": {
                 color: theme("colors.white"),
