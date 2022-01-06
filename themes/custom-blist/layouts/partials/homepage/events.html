@@ -1,20 +1,20 @@
 <section id="events">
-  <div class="py-12 flex flex-col items-center justify-center">
-    <div class="flex flex-col items-center mb-10">
+  <div
+    class="px-6 py-12 mx-auto flex flex-col gap-8 items-center justify-center"
+  >
+    <div class="flex flex-col items-center">
       <div class="text-4xl font-extrabold mb-3 text-center">
         {{ .Site.Params.homepage.events.title }}
       </div>
       <div class="rounded bg-black-900 dark:bg-white h-2 w-16"></div>
     </div>
+    <div class="text-lg text-normal text-center mb-3 max-w-4xl">
+      Retrouvez les derniers évènements organisés par l'association. Chaque
+      année nous tentons d'en proposer une dizaine avec des contenus variés (
+      des impacts sociétaux jusqu'au fonctionnement technique ).
+    </div>
     <div
-      class="
-        flex flex-row flex-wrap
-        items-center
-        justify-center
-        gap-8
-        w-full
-        mb-16
-      "
+      class="flex flex-row flex-wrap items-center justify-center gap-8 w-full"
     >
       {{ range first 4 .Site.Data.events }} {{ partial
       "components/event-card.html" . }} {{ end }}
