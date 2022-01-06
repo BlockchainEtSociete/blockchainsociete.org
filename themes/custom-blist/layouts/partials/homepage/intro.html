@@ -22,11 +22,9 @@
     />
     <div class="max-w-xs">
       <h1 class="text-5xl font-black mb-4 uppercase">
-        {{ .Site.Params.introTitle }}
+        {{ i18n "homeIntroTitle" }}
       </h1>
-      <p class="font-normal text-xl text-lg">
-        {{ .Site.Params.introSubtitle }}
-      </p>
+      <p class="font-normal text-xl text-lg">{{ i18n "homeIntroSubtitle" }}</p>
     </div>
   </div>
 </section>

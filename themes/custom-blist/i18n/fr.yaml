@@ -23,6 +23,7 @@
   translation: "minutes"
 - id: words
   translation: "mots"
+
 # 404 page
 - id: pageNotFound
   translation: "Mince, cette page n'existe pas. (erreur 404)"
@@ -64,3 +65,49 @@
 # Related posts
 - id: seeAlso
   translation: "Voir aussi"
+
+# Home
+- id: homeIntroTitle
+  translation: "Blockchain et Societe"
+- id: homeIntroSubtitle
+  translation: "Le site officiel de l'association crypto et blockchain"
+- id: homeEventsTitle
+  translation: "Les derniers évènements"
+- id: homeEventsDescription
+  translation: "Retrouvez les derniers évènements organisés par l'association. Chaque année nous tentons d'en proposer une dizaine avec des contenus variés (des impacts sociétaux jusqu'au fonctionnement technique)."
+- id: homeEventsAllBtn
+  translation: "Tous les évènements"
+- id: homePostsTitle
+  translation: "Les derniers billets"
+- id: homeTeamTitle
+  translation: "Nos membres"
+- id: homeTeamDescription
+  translation: "Avec plus de 1200 membres sur la page meetup, notre association et ses évènements sont organisés par une équipe de bénévoles féru de crypto."
+- id: homeSocialTitle
+  translation: "Rejoignez-nous"
+- id: homeSocialDescription
+  translation: "Échangez avec la communauté en direct, suivez nos actualités et inscrivez-vous à nos futurs évènements"
+- id: homeSupportTitle
+  translation: "Nos sponsors"
+- id: homeSupportDescription
+  translation: "Notre association à but non lucratif est sponsorisée par plusieurs acteurs investis dans l'écosystème blockchain."
+- id: homeSupportCompanyDescription
+  translation: "Ces sponsors long-terme nous permettent d'ouvrir les portes de certains lieux de rencontre, d'accueillir des intervenants variés ainsi que de partager un moment de convivialité et d'échanges après les conférences."
+- id: homeSupportDonateDescription
+  translation: " Si vous aimez nos actions, n'hésitez pas à soutenir notre association ou à financer une soirée."
+
+# Event page
+- id: eventsTitle
+  translation: "Les évènements"
+- id: eventsDescription
+  translation: "Retrouvez ici tous les évènements organisés par l'association Blockchain et Société depuis sa création en 2016."
+
+# Footer
+- id: footerLegal
+  translation: "Copyright © 2021 - Blockchain et Société, association loi 1901"
+- id: footerAddress
+  translation: "16 rue Maurice Daniel, 44200 Nantes"
+- id: footerPublication
+  translation: "Directeur de la publication : Damien Lecan"
+- id: footerHost
+  translation: "Site hébergé par Netlify, Inc., San Francisco California"

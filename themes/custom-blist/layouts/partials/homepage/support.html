@@ -12,20 +12,18 @@
     "
   >
     <div class="flex flex-col items-center">
-      <div class="text-4xl font-extrabold mb-3">Nos sponsors</div>
+      <div class="text-4xl font-extrabold mb-3">
+        {{ i18n "homeSupportTitle" }}
+      </div>
       <div class="rounded bg-black-900 dark:bg-white h-2 w-16"></div>
     </div>
     <div class="text-lg text-normal text-center mb-3 max-w-xl">
-      Notre association à but non lucratif est sponsorisée par plusieurs acteurs
-      investis dans l'écosystème blockchain.
+      {{ i18n "homeSupportDescription" }}
     </div>
     <div class="grid md:grid-cols-2 grid-cols-none gap-10 items-start">
       <div class="max-w-xl flex flex-col gap-6 justify-center">
         <div class="text-md opacity-60 text-center">
-          Ces sponsors long-terme nous permettent d'ouvrir les portes de
-          certains lieux de rencontre, d'accueillir des intervenants variés
-          ainsi que de partager un moment de convivialité et d'échanges après
-          les conférences.
+          {{ i18n "homeSupportCompanyDescription" }}
         </div>
         <div class="flex flex-row flex-wrap gap-10 items-center justify-center">
           <a
@@ -69,8 +67,7 @@
 
       <div class="max-w-xl flex flex-col gap-6 justify-center">
         <div class="text-md opacity-60 text-center">
-          Si vous aimez nos actions, n'hésitez pas à soutenir notre association
-          ou à financer une soirée.
+          {{ i18n "homeSupportDonateDescription" }}
         </div>
         <div class="flex flex-row flex-wrap gap-3 items-center justify-center">
           <a

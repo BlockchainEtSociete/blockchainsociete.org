@@ -22,8 +22,6 @@ enableRobotsTXT = true
     weight = 1
     languageName = "Français"
     [languages.fr.params]
-      introTitle = "Blockchain et Societe"
-      introSubtitle = "Le site officiel de l'association crypto et blockchain"
       introPhoto = "/picture.jpg"
 
     [[languages.fr.menu.main]]
@@ -36,26 +34,8 @@ enableRobotsTXT = true
         url = "events/"
         weight = 2
 
-    [languages.fr.params.homepage.team]
-        title = "Nos membres"
-
-    [languages.fr.params.homepage.events]
-        title = "Les derniers évènements"
-        allBtn = "Tous les évènements"
-
-    [languages.fr.params.homepage.posts]
-        title = "Les derniers billets"
-
-    [languages.fr.params.homepage.social]
-        title = "Rejoignez-nous"
-        description = "Échangez avec la communauté en direct, suivez nos actualités et inscrivez-vous à nos futurs évènements"
-
     [languages.fr.params.components.eventCard]
         infoBtn = "Plus d'info"
-
-    [languages.fr.params.pages.events]
-        title = "Les évènements"
-        subtitle = "Retrouvez ici tous les évènements organisés par l'association Blockchain et Société depuis sa création en 2016."
 
 [params]
 

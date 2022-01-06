@@ -5,16 +5,14 @@
     {{ else }}
     {{ dateFormat "2006" now }} © {{ .Site.Title }}
     {{ end }} -->
-    <span>Copyright © 2021 - Blockchain et Société, association loi 1901</span>
+    <span>{{ i18n "footerLegal" }}</span>
     <span class="font-extralight text-gray-600"
-      >16 rue Maurice Daniel, 44200 Nantes</span
+      >{{ i18n "footerAddress" }}</span
     >
     <span class="font-extralight text-gray-600"
-      >Directeur de la publication : Damien Lecan</span
+      >{{ i18n "footerPublication" }}</span
     >
-    <span class="font-extralight text-gray-600"
-      >Site hébergé par Netlify, Inc., San Francisco California</span
-    >
+    <span class="font-extralight text-gray-600">{{ i18n "footerHost" }}</span>
   </div>
   <span
     onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
