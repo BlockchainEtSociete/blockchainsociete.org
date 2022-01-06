@@ -1,6 +1,6 @@
-{{ $time := (time .isoDate) }} {{ $upcoming := ($time.After now) }} {{ $endTime
-:= time (add $time.Unix (int .duration) ) }}
-
+{{ $time := (time .isoDate) }} 
+{{ $upcoming := ($time.After now) }} 
+{{ $endTime := time (add $time.Unix (int .duration) ) }}
 <div
   class="
     rounded-lg
@@ -46,7 +46,7 @@
           <polyline points="12 7 12 12 15 15"></polyline>
         </svg>
         <div class="flex-grow">
-          {{ $time.Local.Format "01 January 2006 | 15:04" }} - {{
+          {{ $time.Local.Format "02/01/2006 | 15:04" }} - {{
           $endTime.Local.Format "15:04"}}
         </div>
       </div>
@@ -73,12 +73,7 @@
       <p>{{ .venue }}</p>
       {{ end }}
     </div>
-    <a
-      href="{{ .url }}"
-      rel="noopener noreferrer"
-      target="_blank"
-      class="mt-2"
-    >
+    <a href="{{ .url }}" rel="noopener noreferrer" target="_blank" class="mt-2">
       {{ partial "components/button" (dict "label"
       site.Params.components.eventCard.infoBtn ) }}
     </a>
