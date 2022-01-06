@@ -1,6 +1,6 @@
 [build]
   publish = "docs"
-  command = "HUGO_BASEURL=$URL yarn fetch-events && yarn build"
+  command = "yarn fetch-events && HUGO_BASEURL=$URL yarn build"
 
 [build.environment]
   HUGO_VERSION = "0.91.2"
@@ -8,7 +8,7 @@
   NETLIFY_USE_YARN = "true"
 
 [context.deploy-preview]
-  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL yarn fetch-events && yarn build"
+  command = "yarn fetch-events && HUGO_BASEURL=$DEPLOY_PRIME_URL yarn build"
 
 [context.branch-deploy]
-  command = "HUGO_BASEURL=$DEPLOY_PRIME_URL yarn fetch-events && yarn build --buildDrafts --buildFuture"
+  command = "yarn fetch-events && HUGO_BASEURL=$DEPLOY_PRIME_URL yarn build --buildDrafts --buildFuture"
