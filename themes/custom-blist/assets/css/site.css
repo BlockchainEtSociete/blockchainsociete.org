@@ -53,3 +53,8 @@ body {
     /* Safari, Android, iOS */ url("/fonts/inter-v3-latin-700.svg#Inter")
       format("svg"); /* Legacy iOS */
 }
+
+/* Components */
+.social-card {
+  @apply flex flex-col items-center bg-white py-4 rounded-lg shadow-md gap-1 w-24 dark:bg-black-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+}
