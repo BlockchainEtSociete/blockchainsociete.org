@@ -45,6 +45,7 @@ module.exports = {
             {
               a: {
                 color: "inherit",
+                fontWeight: "inherit",
               },
               "ul > li::before": {
                 backgroundColor: theme("colors.gray.500"),
