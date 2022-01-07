@@ -82,7 +82,7 @@
 - id: homeTeamTitle
   translation: "Nos membres"
 - id: homeTeamDescription
-  translation: "Avec plus de 1200 membres sur la page meetup, notre association et ses évènements sont organisés par une équipe de bénévoles féru de crypto."
+  translation: 'Forte de plus de <a href="https://www.meetup.com/fr-FR/Blockchain-Societe/" target="_blank" rel="noopener" >1200 membres sur Meetup</a >, notre association et ses évènements sont gérés par une équipe de crypto-fans bénévoles.'
 - id: homeSocialTitle
   translation: "Rejoignez-nous"
 - id: homeSocialDescription

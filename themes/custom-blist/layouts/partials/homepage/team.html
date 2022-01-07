@@ -1,48 +1,38 @@
 <section id="team">
   <div
-    class="
-      container
-      px-6
-      py-12
-      mx-auto
-      max-w-4xl
-      flex flex-col
-      gap-8
-      items-center
-      justify-center
-    "
+    class="container px-6 py-12 mx-auto max-w-4xl flex flex-col gap-8 items-center justify-center"
   >
     <div class="flex flex-col items-center">
       <div class="text-4xl font-extrabold mb-3">{{ i18n "homeTeamTitle" }}</div>
       <div class="rounded bg-black-900 dark:bg-white h-2 w-16"></div>
     </div>
     <div class="text-lg text-normal text-center mb-3">
-      {{ i18n "homeTeamDescription"}}
+      {{ i18n "homeTeamDescription" | safeHTML}}
     </div>
     <div class="flex flex-row flex-wrap gap-11 justify-center">
       <div class="flex flex-col items-center justify-center">
         <img src="/images/team/dle.jpg" class="max-w-xxs rounded-full mb-2" />
-        Damien LECAN
+        Damien <span class="uppercase">Lecan</span>
       </div>
       <div class="flex flex-col items-center justify-center">
         <img src="/images/team/gni.jpg" class="max-w-xxs rounded-full mb-2" />
-        Guillaume NICOLAS
+        Guillaume <span class="uppercase">Nicolas</span>
       </div>
       <div class="flex flex-col items-center justify-center">
         <img src="/images/team/ala.jpg" class="max-w-xxs rounded-full mb-2" />
-        Adrien LASSELLE
+        Adrien <span class="uppercase">Lasselle</span>
       </div>
       <div class="flex flex-col items-center justify-center">
         <img src="/images/team/lme.jpg" class="max-w-xxs rounded-full mb-2" />
-        Laure MERLIN
+        Laure <span class="uppercase">Merlin</span>
       </div>
       <div class="flex flex-col items-center justify-center">
         <img src="/images/team/rle.jpg" class="max-w-xxs rounded-full mb-2" />
-        Rachel LE TROTTER
+        Rachel <span class="uppercase">Le Trotter</span>
       </div>
       <div class="flex flex-col items-center justify-center">
         <img src="/images/team/bpr.jpg" class="max-w-xxs rounded-full mb-2" />
-        Bertrand PRESLES
+        Bertrand <span class="uppercase">Presles</span>
       </div>
     </div>
   </div>
