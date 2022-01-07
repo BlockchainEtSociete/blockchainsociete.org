@@ -1,15 +1,5 @@
 <header
-  class="
-    container
-    flex
-    justify-between
-    gap-4
-    flex-wrap
-    py-6
-    px-4
-    md:px-6
-    mx-auto
-  "
+  class="container flex justify-between gap-4 flex-wrap py-6 px-4 md:px-6 mx-auto"
 >
   <a
     href="{{ .Site.Home.Permalink }}"
@@ -72,19 +62,7 @@
         </svg>
       </span>
       <div
-        class="
-          language-dropdown
-          absolute
-          top-full
-          mt-2
-          left-0
-          flex-col
-          gap-2
-          bg-gray-100
-          dark:bg-gray-900 dark:text-white
-          z-10
-          hidden
-        "
+        class="language-dropdown absolute top-full mt-2 left-0 flex-col gap-2 bg-gray-100 dark:bg-gray-900 dark:text-white z-10 hidden"
       >
         {{ range .Site.Languages }} {{ if not (eq .Lang $.Site.Language.Lang) }}
         <a
@@ -145,15 +123,16 @@
     </li>
     {{ end }} {{ if .Site.Params.darkModeToggle }}
     <li class="grid place-items-center">
-      <span class="toggle-dark-mode inline-block cursor-pointer">
+      <div class="flex flex-row items-center gap-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          class="dark-mode-off text-yellow-500"
           width="24"
           height="24"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          fill="none"
+          fill="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
         >
@@ -168,7 +147,30 @@
           <line x1="5" y1="12" x2="5" y2="12.01" />
           <line x1="7" y1="7" x2="7" y2="7.01" />
         </svg>
-      </span>
+        <input
+          class="toggle-dark-mode switch-btn"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="dark-mode-on"
+          width="17"
+          height="17"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+          ></path>
+        </svg>
+      </div>
     </li>
     {{ end }}
   </ul>

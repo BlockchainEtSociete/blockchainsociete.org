@@ -56,10 +56,21 @@ body {
 
 /* Utilities */
 .underline-links a {
-  @apply underline
+  @apply underline;
 }
 
 /* Components */
 .social-card {
   @apply flex flex-col items-center bg-white py-4 rounded-lg shadow-md gap-1 w-24 dark:bg-black-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+}
+
+.switch-btn {
+  @apply appearance-none w-9 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-800 dark:bg-gray-700 focus:outline-none cursor-pointer shadow-sm;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%22-4 -4 8 8%22%3E%3Ccircle r=%223%22 fill=%22%23fff%22/%3E%3C/svg%3E");
+  background-position: 0;
+  transition: background-position 0.15s ease-in-out;
+}
+
+.switch-btn:checked {
+  background-position: 100%;
 }

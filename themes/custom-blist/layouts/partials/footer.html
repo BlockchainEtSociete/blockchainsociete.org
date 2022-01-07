@@ -55,18 +55,24 @@
 {{ end }} {{ if .Site.Params.darkModeToggle }}
 <script>
   // On page load or when changing themes
-  const darkmode = document.querySelector(".toggle-dark-mode");
+  const darkmodeSwitch = document.querySelector(".toggle-dark-mode");
   function toggleDarkMode() {
+    const darkModeOffIcon = document.querySelector(".dark-mode-off");
+    const darkModeOnIcon = document.querySelector(".dark-mode-on");
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
+      darkmodeSwitch.checked = false;
       localStorage.setItem("darkmode", "light");
     } else {
       document.documentElement.classList.add("dark");
+      darkmodeSwitch.checked = true;
       localStorage.setItem("darkmode", "dark");
     }
+    darkModeOnIcon.classList.toggle("text-yellow-500");
+    darkModeOffIcon.classList.toggle("text-yellow-500");
   }
-  if (darkmode) {
-    darkmode.addEventListener("click", toggleDarkMode);
+  if (darkmodeSwitch) {
+    darkmodeSwitch.addEventListener("click", toggleDarkMode);
   }
 
   const isDark = localStorage.getItem("darkmode");

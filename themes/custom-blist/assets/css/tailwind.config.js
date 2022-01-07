@@ -130,6 +130,8 @@ module.exports = {
   variants: {
     extend: {
       typography: ["dark"],
+      backgroundColor: ["checked"],
+      borderColor: ["checked"],
     },
   },
   plugins: [require("@tailwindcss/typography")],
