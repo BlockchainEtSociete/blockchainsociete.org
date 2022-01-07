@@ -10,6 +10,7 @@ module.exports = {
       "config.toml",
       "content/**/*.html",
       "assets/js/search.js",
+      "assets/js/socials.js",
       "exampleSite/layouts/**/*.html",
       "exampleSite/config.toml",
       "exampleSite/content/**/*.html",

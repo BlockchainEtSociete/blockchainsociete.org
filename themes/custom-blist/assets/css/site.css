@@ -3,6 +3,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.prose a.no-underline {
+  text-decoration: none;
+}
+
 /* Fonts */
 
 /* inter-300 - latin */

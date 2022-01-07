@@ -68,9 +68,11 @@
     {{ $datestr | i18n "postedOnDate" }} {{ if ne $datestr $lastmodstr }}
     &nbsp{{ $lastmodstr | i18n "lastModified" }}
   </h5>
-  <h5 class="text-sm flex items-center">
+  <h5 class="text-sm flex items-center justify-between">
     {{ else }} &nbsp;&bull;&nbsp; {{ end }}
-    <svg
+    <div class="flex justify-between w-full">
+      <div class="flex items-center">
+        <svg
       xmlns="http://www.w3.org/2000/svg"
       class="mr-1"
       width="16"
@@ -93,9 +95,27 @@
     -}} {{- $linksOutput := delimit $cleanLinks (i18n "translationsSeparator")
     -}} &nbsp;&bull;&nbsp;{{ i18n "translationsLabel" }}&nbsp;{{ $linksOutput }}
     {{- end }}
+      </div>
+      <div class="flex items-center">
+        {{ partial "components/social-buttons" (dict "title" .Title "url" .Permalink "siteurl" .Site.BaseURL )}}
+      </div>
+    </div>
   </h5>
-
+  
   {{ .Content }}
+
+  <div class="flex items-center justify-end mb-3">
+    {{ partial "components/social-buttons" (dict "title" .Title "url" .Permalink "siteurl" .Site.BaseURL )}}
+  </div>
+
+  <div id="tags" >
+    {{ range (.GetTerms "tags") }}
+      <a class="capitalize no-underline bg-gray-300 px-4 py-2 rounded-md shadow-md hover:opacity-80 hover:shadow-lg focus:opacity-80 focus:shadow-lg focus:outline-none focus:ring-0 mr-2" href="{{ .Permalink }}">{{ .LinkTitle}}</a>
+    {{ end }}
+  </div>
 </article>
 
-{{- partial "homepage/social.html" . -}} {{ end }}
+{{- partial "homepage/social.html" . -}} 
+
+{{ $socials := resources.Get "js/socials.js" }}
+<script src="{{ $socials.Permalink }}"></script> {{ end }}
