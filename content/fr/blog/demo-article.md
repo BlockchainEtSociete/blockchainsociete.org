@@ -5,6 +5,7 @@ date: 2021-12-23
 description: "A full example blog post"
 tags: ["blog", "post", "examples"]
 thumbnail: https://picsum.photos/id/1002/400/250
+images: ["https://picsum.photos/id/1002/400/250"]
 draft: true
 ---
 
