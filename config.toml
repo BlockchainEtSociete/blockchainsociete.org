@@ -1,5 +1,5 @@
 languageCode = 'fr-fr'
-title = 'B&S'
+title = 'Blockchain et Société'
 theme = "custom-blist"
 
 
@@ -38,6 +38,8 @@ enableRobotsTXT = true
         infoBtn = "Plus d'info"
 
 [params]
+
+  titleShort = 'B&S'
 
   # For opengraph and twitter card plugins
   title = 'Blockchain et Société'
