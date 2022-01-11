@@ -1,112 +1,91 @@
 <section id="supports">
   <div
-    class="
-      container
-      px-6
-      py-12
-      mx-auto
-      flex flex-col
-      gap-8
-      items-center
-      justify-center
-    "
+    class="container px-6 py-12 mx-auto flex flex-col gap-8 items-center justify-center"
   >
     <div class="flex flex-col items-center">
-      {{ partial "components/section-title"
-      (dict
-      "title" (i18n "homeSupportTitle")
-      "anchor" "supports" ) }}
+      {{ partial "components/section-title" (dict "title" (i18n
+      "homeSupportTitle") "anchor" "supports" ) }}
       <div class="rounded bg-black-900 dark:bg-white h-2 w-16 mt-3"></div>
     </div>
-    <div class="text-lg text-normal text-center mb-3 max-w-xl">
+    <div class="text-lg text-normal text-center mb-12 max-w-xl">
       {{ i18n "homeSupportDescription" }}
     </div>
-    <div class="grid md:grid-cols-2 grid-cols-none gap-10 items-start">
-      <div class="max-w-xl flex flex-col gap-6 justify-center">
-        <div class="text-md opacity-60 text-center">
-          {{ i18n "homeSupportCompanyDescription" }}
-        </div>
-        <div class="flex flex-row flex-wrap gap-10 items-center justify-center">
-          <a
-            href="https://novapuls.fr/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              class="
-                transition
-                duration-500
-                ease-in-out
-                w-28
-                transform
-                hover:-translate-y-1 hover:scale-110
-              "
-              src="images/partner/novapuls.png"
-              alt="Novapuls"
-            />
-          </a>
-          <a
-            href="https://www.paysdelaloire.fr/les-aides/pays-de-la-loire-developpement"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              class="
-                transition
-                duration-500
-                ease-in-out
-                w-28
-                transform
-                hover:-translate-y-1 hover:scale-110
-              "
-              src="images/partner/pld.png"
-              alt="Pays de La Loire Developement"
-            />
-          </a>
-        </div>
+    <div
+      class="flex flex-row flex-wrap items-center justify-center lg:justify-start w-full gap-10 mb-16"
+    >
+      <div class="max-w-lg text-md opacity-60 text-center lg:text-left">
+        {{ i18n "homeSupportCompanyDescription" }}
       </div>
+      <div class="flex flex-row flex-wrap gap-10 items-center justify-center">
+        <a
+          href="https://novapuls.fr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="transition duration-500 ease-in-out w-28 transform hover:-translate-y-1 hover:scale-110"
+            src="images/partner/novapuls.png"
+            alt="Novapuls"
+          />
+        </a>
+        <a
+          href="https://www.paysdelaloire.fr/les-aides/pays-de-la-loire-developpement"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="transition duration-500 ease-in-out w-28 transform hover:-translate-y-1 hover:scale-110"
+            src="images/partner/pld.png"
+            alt="Pays de La Loire Developement"
+          />
+        </a>
+      </div>
+    </div>
 
-      <div class="max-w-xl flex flex-col gap-6 justify-center">
-        <div class="text-md opacity-60 text-center">
-          {{ i18n "homeSupportDonateDescription" }}
-        </div>
-        <div class="flex flex-row flex-wrap gap-3 items-center justify-center">
-          <a
-            href="https://explorer.ark.io/wallets/ASSRvwixbSmMGjWuJYnEtAdEiErM7acTZR"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{ partial "partials/components/button" (dict "label" "ARK" "color"
-            "bg-red-600" ) }}
-          </a>
-          <a
-            href="https://www.blockchain.com/btc/address/3E8kKYXZEuwnHmWz9VQhksFN5f65WQ5PWp"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{ partial "partials/components/button" (dict "label" "BTC" "color"
-            "bg-yellow-400" ) }}
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="9zYLSQFo6rTWweSBmPGQvPxmtCo3xpYw7qXmV9ie9omw"
-          >
-            {{ partial "partials/components/button" (dict "label" "Ğ1" "color"
-            "bg-blue-400" ) }}</a
-          ><a
-            href="https://etherscan.io/address/0xe5D08beA03e776B54508CF96db99745Cd464140D"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{ partial "partials/components/button" (dict "label" "ETHER"
-            "color" "bg-gray-500" ) }}</a
-          ><a
-            href="https://bit.ly/don-bets"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ partial "partials/components/button" (dict "label" "EURO" "color"
-            "bg-green-400" ) }}</a
-          >
-        </div>
+    <div
+      class="flex flex-col-reverse lg:flex-row flex-wrap items-center justify-end w-full gap-10"
+    >
+      <div
+        class="max-w-sm flex flex-row flex-wrap gap-3 items-center justify-center lg:justify-end"
+      >
+        <a
+          href="https://explorer.ark.io/wallets/ASSRvwixbSmMGjWuJYnEtAdEiErM7acTZR"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ partial "partials/components/button" (dict "label" "ARK" "color"
+          "bg-red-600" ) }}
+        </a>
+        <a
+          href="https://www.blockchain.com/btc/address/3E8kKYXZEuwnHmWz9VQhksFN5f65WQ5PWp"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ partial "partials/components/button" (dict "label" "BTC" "color"
+          "bg-yellow-400" ) }}
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="9zYLSQFo6rTWweSBmPGQvPxmtCo3xpYw7qXmV9ie9omw"
+        >
+          {{ partial "partials/components/button" (dict "label" "Ğ1" "color"
+          "bg-blue-400" ) }}</a
+        ><a
+          href="https://etherscan.io/address/0xe5D08beA03e776B54508CF96db99745Cd464140D"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ partial "partials/components/button" (dict "label" "ETHER" "color"
+          "bg-gray-500" ) }}</a
+        ><a
+          href="https://bit.ly/don-bets"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ partial "partials/components/button" (dict "label" "EURO" "color"
+          "bg-green-400" ) }}</a
+        >
+      </div>
+      <div class="max-w-lg text-md text-center lg:text-left opacity-60">
+        {{ i18n "homeSupportDonateDescription" }}
       </div>
     </div>
   </div>
