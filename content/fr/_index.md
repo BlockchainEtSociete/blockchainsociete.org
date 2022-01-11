@@ -1,4 +1,4 @@
 ---
 title: "Accueil"
-description: "Page principale du site Blockchain et Société"
+description: "Blockchain et Société : démocratisons la Blockchain et ses usages !"
 ---
