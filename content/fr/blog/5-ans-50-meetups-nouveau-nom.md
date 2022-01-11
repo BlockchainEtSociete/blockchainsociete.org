@@ -19,8 +19,8 @@ Retour sur 5 ans et 50 meetups de notre association Blockchain et Société puis
 L'aventure Blockchain et Société commence à l'automne 2015, par une décision dont je ne mesurais pas à l'époque les implications futures : je valide un stage sur la thématique "Blockchain et Smart Contract" proposé par un collègue visionnaire 😎[^1].
 
 Guillaume nous rejoint début 2016 et nous fera découvrir un écosystème riche, au potentiel gigantesque et presque inexploré ... un peu trop en fait 😅.
-L'écosystème Ethereum était balbutiant, l'ether à peine coté et faisait pâle figure à côté de Bitcoin qui était déjà rayonnant.
-Cependant, nous nous sommes sentis seuls, bien trop seuls sur Nantes à faire des projets basés sur la Blockchain.
+L'écosystème Ethereum était balbutiant, l'ether était à peine coté et faisait pâle figure à côté de Bitcoin qui était déjà rayonnant.
+Cependant, nous nous sommes rapidement sentis seuls, bien trop seuls sur Nantes à faire des projets basés sur la Blockchain.
 Nous avions besoin d'échanger, d'en apprendre plus sur la Blockchain, de faire des rencontres.
 
 [^1]: j'étais directeur technique de l'ESN nantaise SQLI à l'époque
@@ -30,11 +30,11 @@ A l'automne 2016, nous sommes une poignée à fonder le Meetup "Blockchain et So
 Voici, pour la petite histoire, [le programme de ce premier meetup][premier-meetup] (soyez indulgents 😂):
 
 > - présentation du concept de blockchain et état de l’art par Benjamin de Zenika Nantes
-> - présentation du projet de location de voiture autonome Chupi par l'équipe Blockchain de SQLI[^2]
+> - présentation du projet de location de voiture autonome _Chupi_ par l'équipe Blockchain de SQLI[^2]
 > - rencontres et échanges autour de jeux Agiles, apéros et pizzas
 
 [premier-meetup]: https://www.meetup.com/fr-FR/Blockchain-Societe/events/236635117/
-[^2]: tous les membres fondateurs du meetup à part Benjamin étaient de SQLI
+[^2]: à part Benjamin, les membres autres fondateurs du meetup travaillaient dans la même ESN
 
 Au-delà de l'auto-promo de nos projets de l'époque (il fallait bien démarrer par quelque chose 😇), les principes du meetup sont posés et ne changeront plus : du contenu puis un apéro/réseautage financé par nos sponsors.
 Nous choisissons dès le début de proposer des contenus ouverts sur la thématique de Blockchain et ne pas nous restreindre aux seuls sujets "cryptos", ce qui nous permettra de traiter de sujets aussi bien techniques que sociétaux.
