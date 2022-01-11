@@ -12,10 +12,11 @@
     "
   >
     <div class="flex flex-col items-center">
-      <div class="text-4xl font-extrabold mb-3">
-        {{ i18n "homeSupportTitle" }}
-      </div>
-      <div class="rounded bg-black-900 dark:bg-white h-2 w-16"></div>
+      {{ partial "components/section-title"
+      (dict
+      "title" (i18n "homeSupportTitle")
+      "anchor" "supports" ) }}
+      <div class="rounded bg-black-900 dark:bg-white h-2 w-16 mt-3"></div>
     </div>
     <div class="text-lg text-normal text-center mb-3 max-w-xl">
       {{ i18n "homeSupportDescription" }}

@@ -13,10 +13,11 @@
     "
   >
     <div class="flex flex-col items-center">
-      <div class="text-4xl font-extrabold mb-3">
-        {{ i18n "homePostsTitle" }}
-      </div>
-      <div class="rounded bg-black-900 dark:bg-white h-2 w-16 mb-2"></div>
+      {{ partial "components/section-title"
+      (dict
+      "title" (i18n "homePostsTitle")
+      "anchor" "posts" ) }}
+      <div class="rounded bg-black-900 dark:bg-white h-2 w-16 mb-2 mt-3"></div>
     </div>
     <div class="flex flex-row flex-wrap gap-11 justify-center"></div>
   </div>
