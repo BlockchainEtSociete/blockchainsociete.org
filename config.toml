@@ -1,4 +1,81 @@
-baseURL = "http://blockchainsociete.org/"
-languageCode = "fr-fr"
-title = "Blockchain & Societe website"
-[taxonomies]
+languageCode = 'fr-fr'
+title = 'Blockchain et Société'
+theme = "custom-blist"
+
+
+DefaultContentLanguage = "fr"
+DefaultContentLanguageInSubdir = true
+
+publishDir = "docs"
+contentDir = "content"
+
+enableEmoji = true
+
+enableRobotsTXT = true
+
+[permalinks]
+  blog = '/:slug/'
+
+[languages]
+  [languages.fr]
+    contentDir = "content/fr"
+    weight = 1
+    languageName = "Français"
+    [languages.fr.params]
+      introPhoto = "/picture.jpg"
+
+    [[languages.fr.menu.main]]
+        name = "Blog"
+        url = "blog"
+        weight = 1
+
+    [[languages.fr.menu.main]]
+        name = "Évènements"
+        url = "events/"
+        weight = 2
+
+    [languages.fr.params.components.eventCard]
+        infoBtn = "Plus d'info"
+
+[params]
+
+  titleShort = 'B&S'
+
+  # For opengraph and twitter card plugins
+  title = 'Blockchain et Société'
+  description = 'Blockchain et Société site officiel'
+  images = ['images/opengraph.png']
+
+  darkModeToggle = true
+
+  # Enable search in header
+  # enableSearch = true
+
+  # Custom copyright - optional
+  favicon = "/favicon.svg"
+
+  # Color for the intro details and social links block, not applicable for dark mode
+  # Supported values: Any color from TailwindCSS default colors
+  # Reference: https://tailwindcss.com/docs/customizing-colors
+  ascentColor = "bg-gray-100"
+
+
+[params.social]
+  twitter = "https://twitter.com/Blockchain44"
+  slack = "https://join.slack.com/t/meetup-blockchain/shared_invite/zt-3u8hgq75-hkvVna9GdMnRwf7Pq4tqFw"
+  github = "https://github.com/BlockchainEtSociete"
+  meetup = "https://www.meetup.com/fr-FR/Blockchain-Societe/"
+  youtube = "https://www.youtube.com/channel/UCLxvA3g5oqdItCMvO6Scfhg"
+  email = "mailto:contact@blockchainsociete.org"
+  facebook = "https://www.facebook.com/groups/822513524759506/"
+  linkedin = "https://www.linkedin.com/company/blockchain-et-societe"
+
+
+
+# syntax highlight settings
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    # Enable to include inline HTML
+    unsafe = true

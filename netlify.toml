@@ -1,0 +1,14 @@
+[build]
+  publish = "docs"
+  command = "yarn fetch-events && HUGO_BASEURL=$URL yarn build"
+
+[build.environment]
+  HUGO_VERSION = "0.91.2"
+  NODE_VERSION = "16"
+  NETLIFY_USE_YARN = "true"
+
+[context.deploy-preview]
+  command = "yarn fetch-events && HUGO_BASEURL=$DEPLOY_PRIME_URL yarn build"
+
+[context.branch-deploy]
+  command = "yarn fetch-events && HUGO_BASEURL=$DEPLOY_PRIME_URL yarn build --buildDrafts --buildFuture"

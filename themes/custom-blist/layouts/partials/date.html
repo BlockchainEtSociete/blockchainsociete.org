@@ -1,0 +1,9 @@
+{{ if in "de fr" .language.Lang  }}
+  {{ .date.Format "02/01/2006"}}
+{{ else }}
+  {{ if eq "long" .format }}
+    {{ .date.Format "January 2, 2006" }}
+  {{ else }}
+    {{ .date.Format "Jan 2, 06" }}
+  {{ end }}
+{{ end }}

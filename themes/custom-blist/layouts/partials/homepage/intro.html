@@ -1,0 +1,30 @@
+<section class="bg-black-900 text-white relative">
+  <div id="particles" class="absolute w-full h-full"></div>
+  <div
+    class="
+      container
+      max-w-screen-lg
+      mx-auto
+      px-10
+      py-32
+      flex flex-row-reverse flex-wrap
+      text-center
+      sm:text-left
+      gap-10
+      items-center
+      justify-center
+    "
+  >
+    <img
+      class="max-w-xxs"
+      src="/images/logo.png"
+      alt="{{ .Site.Params.Title }}"
+    />
+    <div class="max-w-xs">
+      <h1 class="text-5xl font-black mb-4 uppercase">
+        {{ i18n "homeIntroTitle" }}
+      </h1>
+      <p class="font-normal text-xl text-lg">{{ i18n "homeIntroSubtitle" }}</p>
+    </div>
+  </div>
+</section>

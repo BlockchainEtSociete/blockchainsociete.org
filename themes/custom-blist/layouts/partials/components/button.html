@@ -1,0 +1,22 @@
+<button
+  type="button"
+  class="
+    px-8
+    py-2.5
+    {{ .color | default "bg-indigo-600" }}
+    text-white
+    font-medium
+    text-sm
+    leading-tight
+    uppercase
+    rounded-full
+    shadow-md
+    hover:opacity-80 hover:shadow-lg
+    focus:opacity-80 focus:shadow-lg focus:outline-none focus:ring-0
+    transition
+    duration-150
+    ease-in-out
+  "
+>
+  {{ .label }}
+</button>
