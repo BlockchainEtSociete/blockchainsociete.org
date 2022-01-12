@@ -1,34 +1,86 @@
 <header
-  class="container flex justify-between gap-4 flex-wrap py-6 px-4 md:px-6 mx-auto"
+  class="w-full sticky top-0 bg-white text-black-700 dark:bg-black-700 dark:text-white z-50"
 >
-  <a
-    href="{{ .Site.Home.Permalink }}"
-    class="capitalize font-extrabold text-2xl flex flex-row items-center gap-2"
-  >
-    <svg
-      width="40"
-      height="41"
-      viewBox="0 0 47 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+  <div class="container flex justify-between gap-4 flex-wrap py-6 px-4 md:px-6 mx-auto">
+    <a
+      href="{{ .Site.Home.Permalink }}"
+      class="capitalize font-extrabold text-2xl flex flex-row items-center gap-2"
     >
-      <path
-        fill="currentColor"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M23.5026 47.9751C36.4798 47.9751 47 37.4549 47 24.4777C47 11.5004 36.4798 0.980225 23.5026 0.980225C10.5253 0.980225 0.00512695 11.5004 0.00512695 24.4777C0.00512695 37.4549 10.5253 47.9751 23.5026 47.9751ZM20.394 6.76392C20.7265 6.57256 21.1364 6.57144 21.47 6.76098L27.5767 10.2309C27.9109 10.4209 28.1178 10.7735 28.1194 11.156L28.1469 17.9518C28.1485 18.334 27.9447 18.6881 27.6124 18.8808L25.8313 19.9134C25.5039 20.1033 25.0985 20.1016 24.7727 19.9091C24.0873 19.504 24.0953 18.5156 24.7872 18.1215L25.5127 17.7083C25.8478 17.5175 26.0545 17.1632 26.0545 16.7795V12.3564C26.0545 11.9745 25.8497 11.6215 25.517 11.43L21.5495 9.14651C21.2174 8.95536 20.808 8.95398 20.4746 9.14288L16.5483 11.3675C16.212 11.558 16.0044 11.913 16.0044 12.2975V16.6747C16.0044 17.0454 16.1975 17.3898 16.5149 17.585L17.301 18.0684C17.9905 18.4925 17.978 19.4929 17.2781 19.8998C16.9376 20.0978 16.5153 20.0949 16.1776 19.8923L14.4144 18.8345C14.0913 18.6406 13.8938 18.293 13.8938 17.9181V11.1218C13.8938 10.7399 14.0986 10.3869 14.4313 10.1954L20.394 6.76392ZM27.08 25.8117C26.7474 26.0031 26.3374 26.0042 26.0038 25.8147L19.8972 22.3448C19.563 22.1548 19.3561 21.8022 19.3545 21.4197L19.327 14.6228C19.3254 14.2405 19.5292 13.8864 19.8617 13.6938L21.6414 12.6622C21.9688 12.4724 22.3742 12.474 22.7 12.6665C23.3859 13.0716 23.378 14.0604 22.6858 14.4547L21.9612 14.8674C21.6261 15.0582 21.4194 15.4125 21.4194 15.7962V20.2182C21.4194 20.6001 21.6242 20.953 21.9568 21.1445L25.9242 23.429C26.2564 23.6203 26.6659 23.6217 26.9994 23.4327L30.9246 21.2082C31.2608 21.0177 31.4683 20.6628 31.4683 20.2783V15.9009C31.4683 15.5302 31.2753 15.1859 30.958 14.9907L30.1727 14.5075C29.4832 14.0833 29.4958 13.0829 30.1957 12.6759C30.5363 12.4779 30.9586 12.4808 31.2964 12.6834L33.0595 13.7412C33.3827 13.9351 33.5802 14.2827 33.5802 14.6576V21.4528C33.5802 21.8346 33.3754 22.1876 33.0427 22.3791L27.08 25.8117ZM20.9001 24.1242C20.5324 23.907 20.0639 23.9443 19.7529 24.2359C19.4349 24.5342 19.131 24.8462 18.8423 25.1709C16.8589 27.4037 15.952 29.8423 15.5179 31.7029C15.401 32.204 14.9645 32.5752 14.4466 32.5813L11.7352 32.6131C11.117 32.6203 10.6165 32.1103 10.6777 31.4994C10.774 30.5385 10.9411 29.5849 11.178 28.6457C11.5893 27.0182 12.097 25.0965 13.6224 23.1747C13.891 22.837 14.1787 22.5142 14.4843 22.2077C14.9888 21.7014 14.8973 20.8192 14.2543 20.5035C13.9055 20.3322 13.4852 20.3818 13.2022 20.647C12.7445 21.0759 12.319 21.5354 11.929 22.0223C9.96255 24.4736 9.40424 27.0088 8.96451 29.1138C8.64779 30.6385 8.48034 32.188 8.46427 33.7422C8.46286 33.8788 8.48416 34.0173 8.55715 34.133C8.67256 34.316 8.83854 34.4654 9.03691 34.5645C9.14407 34.618 9.26536 34.6325 9.38528 34.631L13.6031 34.5778C14.3124 34.5688 14.8357 35.2327 14.7531 35.9324C14.6844 36.5141 14.6651 37.1008 14.6956 37.6867C14.7007 37.786 14.7187 37.8852 14.7643 37.9736C14.8875 38.2125 15.0916 38.4046 15.343 38.5187C15.4411 38.5632 15.5498 38.5761 15.6577 38.5761H38.3361C38.518 38.5734 38.6908 38.4995 38.8142 38.3717C38.9134 38.263 38.9702 38.1247 38.9747 37.9804C39.0872 35.8436 38.9371 33.7015 38.5276 31.5981C38.0669 29.2438 37.6914 27.4437 36.2363 25.6614C35.585 24.8697 34.8099 24.1804 33.9393 23.6175C33.6493 23.43 33.2778 23.4347 32.9796 23.6089C32.3272 23.9898 32.3458 24.9548 32.9431 25.4164C33.6684 25.9771 34.3057 26.6394 34.8319 27.3834C35.7212 28.6575 36.0165 29.8205 36.387 31.3759C36.713 32.7395 36.8975 34.1296 36.9381 35.5261C36.9551 36.1092 36.4714 36.5749 35.884 36.5731L17.9525 36.5173C17.3208 36.5154 16.8244 35.9767 16.9063 35.3547C16.999 34.6514 17.1186 33.9515 17.265 33.2564L17.2652 33.2555C17.5986 31.6721 17.8753 30.3581 18.5657 29.0015C18.954 28.2395 19.6732 27.0617 21.0209 25.8537C21.5566 25.3735 21.5204 24.4905 20.9001 24.1242Z"
-      />
-    </svg>
-    {{ .Site.Params.titleShort }}
-  </a>
-  <ul class="flex items-center gap-4 lg:gap-6">
-    {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
-    {{ end }} {{ if .Site.IsMultiLingual }} {{ if ge (len .Site.Languages) 3 }}
-    <li class="relative cursor-pointer">
-      <span class="language-switcher flex items-center gap-2">
+      <svg
+        width="40"
+        height="41"
+        viewBox="0 0 47 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="currentColor"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M23.5026 47.9751C36.4798 47.9751 47 37.4549 47 24.4777C47 11.5004 36.4798 0.980225 23.5026 0.980225C10.5253 0.980225 0.00512695 11.5004 0.00512695 24.4777C0.00512695 37.4549 10.5253 47.9751 23.5026 47.9751ZM20.394 6.76392C20.7265 6.57256 21.1364 6.57144 21.47 6.76098L27.5767 10.2309C27.9109 10.4209 28.1178 10.7735 28.1194 11.156L28.1469 17.9518C28.1485 18.334 27.9447 18.6881 27.6124 18.8808L25.8313 19.9134C25.5039 20.1033 25.0985 20.1016 24.7727 19.9091C24.0873 19.504 24.0953 18.5156 24.7872 18.1215L25.5127 17.7083C25.8478 17.5175 26.0545 17.1632 26.0545 16.7795V12.3564C26.0545 11.9745 25.8497 11.6215 25.517 11.43L21.5495 9.14651C21.2174 8.95536 20.808 8.95398 20.4746 9.14288L16.5483 11.3675C16.212 11.558 16.0044 11.913 16.0044 12.2975V16.6747C16.0044 17.0454 16.1975 17.3898 16.5149 17.585L17.301 18.0684C17.9905 18.4925 17.978 19.4929 17.2781 19.8998C16.9376 20.0978 16.5153 20.0949 16.1776 19.8923L14.4144 18.8345C14.0913 18.6406 13.8938 18.293 13.8938 17.9181V11.1218C13.8938 10.7399 14.0986 10.3869 14.4313 10.1954L20.394 6.76392ZM27.08 25.8117C26.7474 26.0031 26.3374 26.0042 26.0038 25.8147L19.8972 22.3448C19.563 22.1548 19.3561 21.8022 19.3545 21.4197L19.327 14.6228C19.3254 14.2405 19.5292 13.8864 19.8617 13.6938L21.6414 12.6622C21.9688 12.4724 22.3742 12.474 22.7 12.6665C23.3859 13.0716 23.378 14.0604 22.6858 14.4547L21.9612 14.8674C21.6261 15.0582 21.4194 15.4125 21.4194 15.7962V20.2182C21.4194 20.6001 21.6242 20.953 21.9568 21.1445L25.9242 23.429C26.2564 23.6203 26.6659 23.6217 26.9994 23.4327L30.9246 21.2082C31.2608 21.0177 31.4683 20.6628 31.4683 20.2783V15.9009C31.4683 15.5302 31.2753 15.1859 30.958 14.9907L30.1727 14.5075C29.4832 14.0833 29.4958 13.0829 30.1957 12.6759C30.5363 12.4779 30.9586 12.4808 31.2964 12.6834L33.0595 13.7412C33.3827 13.9351 33.5802 14.2827 33.5802 14.6576V21.4528C33.5802 21.8346 33.3754 22.1876 33.0427 22.3791L27.08 25.8117ZM20.9001 24.1242C20.5324 23.907 20.0639 23.9443 19.7529 24.2359C19.4349 24.5342 19.131 24.8462 18.8423 25.1709C16.8589 27.4037 15.952 29.8423 15.5179 31.7029C15.401 32.204 14.9645 32.5752 14.4466 32.5813L11.7352 32.6131C11.117 32.6203 10.6165 32.1103 10.6777 31.4994C10.774 30.5385 10.9411 29.5849 11.178 28.6457C11.5893 27.0182 12.097 25.0965 13.6224 23.1747C13.891 22.837 14.1787 22.5142 14.4843 22.2077C14.9888 21.7014 14.8973 20.8192 14.2543 20.5035C13.9055 20.3322 13.4852 20.3818 13.2022 20.647C12.7445 21.0759 12.319 21.5354 11.929 22.0223C9.96255 24.4736 9.40424 27.0088 8.96451 29.1138C8.64779 30.6385 8.48034 32.188 8.46427 33.7422C8.46286 33.8788 8.48416 34.0173 8.55715 34.133C8.67256 34.316 8.83854 34.4654 9.03691 34.5645C9.14407 34.618 9.26536 34.6325 9.38528 34.631L13.6031 34.5778C14.3124 34.5688 14.8357 35.2327 14.7531 35.9324C14.6844 36.5141 14.6651 37.1008 14.6956 37.6867C14.7007 37.786 14.7187 37.8852 14.7643 37.9736C14.8875 38.2125 15.0916 38.4046 15.343 38.5187C15.4411 38.5632 15.5498 38.5761 15.6577 38.5761H38.3361C38.518 38.5734 38.6908 38.4995 38.8142 38.3717C38.9134 38.263 38.9702 38.1247 38.9747 37.9804C39.0872 35.8436 38.9371 33.7015 38.5276 31.5981C38.0669 29.2438 37.6914 27.4437 36.2363 25.6614C35.585 24.8697 34.8099 24.1804 33.9393 23.6175C33.6493 23.43 33.2778 23.4347 32.9796 23.6089C32.3272 23.9898 32.3458 24.9548 32.9431 25.4164C33.6684 25.9771 34.3057 26.6394 34.8319 27.3834C35.7212 28.6575 36.0165 29.8205 36.387 31.3759C36.713 32.7395 36.8975 34.1296 36.9381 35.5261C36.9551 36.1092 36.4714 36.5749 35.884 36.5731L17.9525 36.5173C17.3208 36.5154 16.8244 35.9767 16.9063 35.3547C16.999 34.6514 17.1186 33.9515 17.265 33.2564L17.2652 33.2555C17.5986 31.6721 17.8753 30.3581 18.5657 29.0015C18.954 28.2395 19.6732 27.0617 21.0209 25.8537C21.5566 25.3735 21.5204 24.4905 20.9001 24.1242Z"
+        />
+      </svg>
+      {{ .Site.Params.titleShort }}
+    </a>
+    <ul class="flex items-center gap-4 lg:gap-6">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+      {{ end }} {{ if .Site.IsMultiLingual }} {{ if ge (len .Site.Languages) 3 }}
+      <li class="relative cursor-pointer">
+        <span class="language-switcher flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="9" />
+            <line x1="3.6" y1="9" x2="20.4" y2="9" />
+            <line x1="3.6" y1="15" x2="20.4" y2="15" />
+            <path d="M11.5 3a17 17 0 0 0 0 18" />
+            <path d="M12.5 3a17 17 0 0 1 0 18" />
+          </svg>
+          <a>{{ i18n "languageSwitcherLabel" }}</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M18 15l-6 -6l-6 6h12" transform="rotate(180 12 12)" />
+          </svg>
+        </span>
+        <div
+          class="language-dropdown absolute top-full mt-2 left-0 flex-col gap-2 bg-gray-100 dark:bg-gray-900 dark:text-white z-10 hidden"
+        >
+          {{ range .Site.Languages }} {{ if not (eq .Lang $.Site.Language.Lang) }}
+          <a
+            class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
+            href="/{{ .Lang }}"
+            lang="{{ .Lang }}"
+            >{{ default .Lang .LanguageName }}</a
+          >
+          {{ end }} {{ end }}
+        </div>
+      </li>
+      {{ else }}
+      <li class="flex items-center">
+        {{ range .Site.Languages }} {{ if not (eq .Lang $.Site.Language.Lang) }}
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          class="mr-2"
           width="16"
           height="16"
           viewBox="0 0 24 24"
@@ -45,133 +97,83 @@
           <path d="M11.5 3a17 17 0 0 0 0 18" />
           <path d="M12.5 3a17 17 0 0 1 0 18" />
         </svg>
-        <a>{{ i18n "languageSwitcherLabel" }}</a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M18 15l-6 -6l-6 6h12" transform="rotate(180 12 12)" />
-        </svg>
-      </span>
-      <div
-        class="language-dropdown absolute top-full mt-2 left-0 flex-col gap-2 bg-gray-100 dark:bg-gray-900 dark:text-white z-10 hidden"
-      >
-        {{ range .Site.Languages }} {{ if not (eq .Lang $.Site.Language.Lang) }}
-        <a
-          class="px-3 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
-          href="/{{ .Lang }}"
-          lang="{{ .Lang }}"
+        <a href="/{{ .Lang }}" lang="{{ .Lang }}"
           >{{ default .Lang .LanguageName }}</a
         >
         {{ end }} {{ end }}
-      </div>
-    </li>
-    {{ else }}
-    <li class="flex items-center">
-      {{ range .Site.Languages }} {{ if not (eq .Lang $.Site.Language.Lang) }}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="mr-2"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <circle cx="12" cy="12" r="9" />
-        <line x1="3.6" y1="9" x2="20.4" y2="9" />
-        <line x1="3.6" y1="15" x2="20.4" y2="15" />
-        <path d="M11.5 3a17 17 0 0 0 0 18" />
-        <path d="M12.5 3a17 17 0 0 1 0 18" />
-      </svg>
-      <a href="/{{ .Lang }}" lang="{{ .Lang }}"
-        >{{ default .Lang .LanguageName }}</a
-      >
-      {{ end }} {{ end }}
-    </li>
-    {{ end }} {{ end }} {{ if .Site.Params.enableSearch }}
-    <li class="grid place-items-center">
-      <span class="open-search inline-block cursor-pointer">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <circle cx="10" cy="10" r="7" />
-          <line x1="21" y1="21" x2="15" y2="15" />
-        </svg>
-      </span>
-    </li>
-    {{ end }} {{ if .Site.Params.darkModeToggle }}
-    <li class="grid place-items-center">
-      <div class="flex flex-row items-center gap-1">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="dark-mode-off text-yellow-500"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <circle cx="12" cy="12" r="3" />
-          <line x1="12" y1="5" x2="12" y2="5.01" />
-          <line x1="17" y1="7" x2="17" y2="7.01" />
-          <line x1="19" y1="12" x2="19" y2="12.01" />
-          <line x1="17" y1="17" x2="17" y2="17.01" />
-          <line x1="12" y1="19" x2="12" y2="19.01" />
-          <line x1="7" y1="17" x2="7" y2="17.01" />
-          <line x1="5" y1="12" x2="5" y2="12.01" />
-          <line x1="7" y1="7" x2="7" y2="7.01" />
-        </svg>
-        <input
-          class="toggle-dark-mode switch-btn"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckDefault"
-        />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="dark-mode-on"
-          width="17"
-          height="17"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          fill="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path
-            d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
-          ></path>
-        </svg>
-      </div>
-    </li>
-    {{ end }}
-  </ul>
+      </li>
+      {{ end }} {{ end }} {{ if .Site.Params.enableSearch }}
+      <li class="grid place-items-center">
+        <span class="open-search inline-block cursor-pointer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="10" cy="10" r="7" />
+            <line x1="21" y1="21" x2="15" y2="15" />
+          </svg>
+        </span>
+      </li>
+      {{ end }} {{ if .Site.Params.darkModeToggle }}
+      <li class="grid place-items-center">
+        <div class="flex flex-row items-center gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="dark-mode-off text-yellow-500"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="12" r="3" />
+            <line x1="12" y1="5" x2="12" y2="5.01" />
+            <line x1="17" y1="7" x2="17" y2="7.01" />
+            <line x1="19" y1="12" x2="19" y2="12.01" />
+            <line x1="17" y1="17" x2="17" y2="17.01" />
+            <line x1="12" y1="19" x2="12" y2="19.01" />
+            <line x1="7" y1="17" x2="7" y2="17.01" />
+            <line x1="5" y1="12" x2="5" y2="12.01" />
+            <line x1="7" y1="7" x2="7" y2="7.01" />
+          </svg>
+          <input
+            class="toggle-dark-mode switch-btn"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="dark-mode-on"
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+            ></path>
+          </svg>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 </header>
