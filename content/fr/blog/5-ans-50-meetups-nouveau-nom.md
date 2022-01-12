@@ -41,7 +41,7 @@ Nous choisissons dès le début de proposer des contenus ouverts sur la thémati
 
 Et le public nous suivra, puisque nous aurons entre 20 et 70 participants à chaque session !
 
-Enfin, en Janvier 2018, la création de l'association Blockchain et Société Nantes nous permettra gérer proprement les financements des sponsors.
+Enfin, en Janvier 2018, la création de l'association Blockchain et Société Nantes nous permettra de gérer proprement les financements des sponsors.
 Le premier bureau sera constitué de Laurent, Benjamin et moi-même.
 
 En 5 ans et 50 meetups, voici quelques sujets -en vrac- qui ont été abordés et développés : Ethereum, développement de smart-contracts, les Oracles, les blockchains privés avec Hyperledger, la décentralisation, la Proof-Of-Stake, la fiscalité des cryptos, Ark Ecosystem, NFT (déjà en 2018 !), les airdrops, IOTA, Brave et Basic Attention Token, le Lightning Network, la monnaie libre / Duniter / Ğ1, Facebook Libra, IPFS, tokenisation immobilière, la DeFi, les cryptos et les impôts, les IDO / ILO / LGE, Cardano ...
