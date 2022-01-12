@@ -1,30 +1,19 @@
-{{ $time := (time .isoDate) }} 
-{{ $upcoming := ($time.After now) }} 
-{{ $endTime := time (add $time.Unix (int .duration) ) }}
+{{ $time := (time .Params.date) }} {{ $upcoming := ($time.After now) }} {{
+$endTime := time (add $time.Unix (int .Params.duration) ) }}
 <div
-  class="
-    rounded-lg
-    shadow-lg
-    bg-white
-    dark:bg-gray-800
-    w-96
-    h-120
-    overflow-auto
-    flex flex-col
-  "
+  class="rounded-lg shadow-lg bg-white dark:bg-gray-800 w-96 h-120 overflow-auto flex flex-col"
 >
-  {{ $image := (cond (isset . "image") .image
-  "/images/event-card-default-img.png") }}
+  {{ $image := .Params.thumbnail }}
   <div class="bg-gray-200 h-56">
     <img
       src="{{ $image }}"
-      alt="{{ .name }} presentation image"
+      alt="{{ .Params.name }} presentation image"
       class="h-full w-auto object-cover"
     />
   </div>
 
   <div class="p-6 text-center flex flex-col gap-2 flex-grow">
-    <div class="text-xl font-medium">{{ .name }}</div>
+    <div class="text-xl font-medium">{{ .Params.title }}</div>
     <div
       class="flex-grow flex flex-col justify-end items-start text-left gap-1"
     >
@@ -67,10 +56,10 @@
           <circle cx="12" cy="12" r="9"></circle>
           <path d="M12 17l-1 -4l-4 -1l9 -4z"></path>
         </svg>
-        <div class="flex-grow truncate">{{ .venue }}</div>
+        <div class="flex-grow truncate">{{ .Params.venue }}</div>
       </div>
     </div>
-    <a href="{{ .url }}" rel="noopener noreferrer" target="_blank" class="mt-2">
+    <a href="{{ .Permalink }}" class="mt-2">
       {{ partial "components/button" (dict "label"
       site.Params.components.eventCard.infoBtn ) }}
     </a>

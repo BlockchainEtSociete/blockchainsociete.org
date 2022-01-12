@@ -1,5 +1,5 @@
 const { EVENTS_URL } = require("./constants");
-const { fetch, buildEventFile } = require("./utils");
+const { fetch, buildEventPages } = require("./utils");
 
 const fetchEventsAsync = new Promise(async (res, rej) => {
   console.log(`1️⃣...... Fetching events from ENDPOINT ${EVENTS_URL}`);
@@ -10,7 +10,8 @@ const fetchEventsAsync = new Promise(async (res, rej) => {
   .then((response) => {
     console.log("2️⃣...... Formating events");
     const json = JSON.parse(response);
-    buildEventFile(json);
+    console.log("3️⃣...... Create events pages");
+    buildEventPages(json);
   })
   .then(() => console.log("🟢 Event fetching is DONE"))
   .catch((error) => {
