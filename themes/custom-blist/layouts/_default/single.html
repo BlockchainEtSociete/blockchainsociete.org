@@ -109,7 +109,7 @@
       </div>
     </div>
   </h5>
-  
+
   {{ .Content }}
 
   <div class="flex items-center justify-end mb-3">
@@ -123,7 +123,22 @@
   </div>
 </article>
 
-{{- partial "homepage/social.html" . -}} 
+
+<div class="max-w-4xl mx-auto my-8 px-4">
+  <div class="h-px bg-gray-200"></div>
+  <h4 class="font-semibold text-2xl text-black-700  my-8 dark:text-white ">{{ i18n "morePosts" }}</h4>
+  <div class="grid grid-cols-none md:grid-cols-3 gap-8 md:gap-4 justify-center">
+    {{ range first 3 ( where (shuffle .Site.RegularPages) "Title" "!=" .Title  ) }}
+      <a href="{{ .Permalink }}" class="flex flex-col items-center text-center hover-animation max-w-xs">
+        <img src="{{ .Params.thumbnail }}"  alt="{{ .Title }}" class="w-full h-48 object-cover rounded-lg mb-3">
+        <div class="text-md font-medium text-gray-900 dark:text-gray-300">{{ .Title }}</div>
+      </a>
+    {{ end }}
+  </div>
+
+</div>
+
+{{- partial "homepage/social.html" . -}}
 
 {{ $socials := resources.Get "js/socials.js" }}
 <script src="{{ $socials.Permalink }}"></script> {{ end }}
