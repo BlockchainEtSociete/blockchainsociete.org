@@ -69,7 +69,7 @@ body {
 
 /* Components */
 .social-card {
-  @apply flex flex-col items-center bg-white py-4 rounded-lg shadow-md gap-1 w-24 dark:bg-black-700 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110;
+  @apply flex flex-col items-center bg-white py-4 rounded-lg shadow-md gap-1 w-24 dark:bg-black-700 hover-animation;
 }
 
 .switch-btn {
