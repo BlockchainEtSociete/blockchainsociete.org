@@ -1,5 +1,7 @@
 resources
 node_modules
-data
 docs
 public
+
+content/*/events/*
+!content/*/events/_index.md

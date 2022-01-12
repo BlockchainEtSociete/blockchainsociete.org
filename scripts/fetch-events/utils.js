@@ -1,7 +1,8 @@
 const https = require("https");
 const fs = require("fs");
 const path = require("path");
-const { EVENT_FILE_PATH } = require("./constants");
+const os = require("os");
+const { EVENT_PAGES_PATH } = require("./constants");
 
 function formatDate(timestamp) {
   const dateObj = new Date(timestamp);
@@ -18,25 +19,6 @@ function formatDate(timestamp) {
   const year = localeDate.getFullYear();
 
   return `${day}/${month}/${year}`;
-}
-
-function formatTime(timestamp, duration) {
-  const locale = "fr-FR";
-  const timeOptions = {
-    timeZone: "Europe/Paris",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  };
-
-  const startTime = new Date(timestamp).toLocaleTimeString(locale, timeOptions);
-  const endTime = new Date(timestamp + duration).toLocaleTimeString(
-    locale,
-    timeOptions
-  );
-
-  const formatedTime = `${startTime} - ${endTime}`;
-  return formatedTime;
 }
 
 function formatVenue(venue) {
@@ -71,25 +53,53 @@ function fetch(url) {
   });
 }
 
-function buildEventFile(events) {
-  let output = events.map((event) => {
-    return {
-      name: event.name,
-      isoDate: new Date(event.time).toISOString(),
-      duration: event.duration / 1000 || 10800, // event duration in seconds
-      date: formatDate(event.time),
-      time: formatTime(event.time, event.duration || 10800000),
-      venue: formatVenue(event.venue),
-      image: event.featured_photo ? event.featured_photo.photo_link : undefined, // has `featured_photo.highres_link` if necessary!
-      url: event.link,
-    };
-  });
+/*
+  Write each event as a hugo page. It overwrites the existing file if it exists.
+*/
+function buildEventPages(events) {
+  for (const {
+    id,
+    time,
+    name,
+    description,
+    featured_photo,
+    duration,
+    venue,
+  } of events) {
+    const fName = name.replace(/"/g, "'"); // remove ' character from event title
+    const date = formatDate(time); // format date dd/mm/yyyy -- TODO i18n
+    const image = featured_photo
+      ? featured_photo.photo_link
+      : "/images/event-card-default-img.png"; // set default image
+    const isoDate = new Date(time).toISOString();
 
-  fs.mkdirSync(path.parse(EVENT_FILE_PATH).dir, { recursive: true });
-  fs.writeFileSync(EVENT_FILE_PATH, JSON.stringify(output));
+    // Event file name is its event date
+    const filePath = path.join(
+      EVENT_PAGES_PATH,
+      `${isoDate.substring(0, 10)}.md`
+    );
+
+    const fileTemplate = [
+      "---",
+      `title: "${fName}"`,
+      `description: "Évènement du ${date}"`,
+      `date: ${isoDate}`,
+      "author: Bob",
+      `thumbnail: ${image}`,
+      `images: ["${image}"]`,
+      `duration: ${duration / 1000 || 10800}`, // event duration in seconds
+      `venue: ${formatVenue(venue)}`,
+      "---",
+      `${description}`,
+    ];
+
+    const fileStream = fs.createWriteStream(filePath);
+    fileTemplate.forEach((line) => fileStream.write(line + os.EOL));
+    fileStream.end();
+  }
 }
 
 module.exports = {
   fetch,
-  buildEventFile,
+  buildEventPages,
 };
