@@ -10,10 +10,11 @@
     <div class="text-lg">{{ i18n "eventsDescription" }}</div>
   </div>
 
-  {{ $paginator := .Paginate .Pages.ByDate.Reverse 6 }}
+  {{ $paginator := .Paginate .Pages.ByDate.Reverse 9 }}
   <div class="flex flex-row flex-wrap gap-6 justify-center">
-    {{ range $paginator.Pages }}{{ partial "components/event-card.html" . }} {{
-    end }}
+    {{ range $paginator.Pages }}
+      {{ partial "components/event-card.html" . }} 
+    {{ end }}
   </div>
 
   {{- partial "pagination.html" . -}}

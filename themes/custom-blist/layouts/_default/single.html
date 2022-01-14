@@ -4,7 +4,7 @@
 {{ if .Params.thumbnail }}
 <div class="relative max-w-5xl mx-auto px-4">
   <img
-    src="{{ .Params.thumbnail }}"
+    src="{{ cond (isset .Params "thumbnailhighres") .Params.thumbnailhighres .Params.thumbnail }}"
     class="rounded-lg shadow-sm w-full object-contain"
   />
   <div

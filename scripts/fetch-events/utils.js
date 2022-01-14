@@ -71,6 +71,9 @@ function buildEventPages(events) {
     const image = featured_photo
       ? featured_photo.photo_link
       : "/images/event-card-default-img.png"; // set default image
+    const imageHighRes = featured_photo
+      ? featured_photo.highres_link
+      : undefined;
     const isoDate = new Date(time).toISOString();
 
     // Event file name is its event date
@@ -84,8 +87,9 @@ function buildEventPages(events) {
       `title: "${fName}"`,
       `description: "Évènement du ${date}"`,
       `date: ${isoDate}`,
-      "author: Bob",
+      "author: meetup",
       `thumbnail: ${image}`,
+      imageHighRes ? `thumbnailHighRes: ${imageHighRes}` : "",
       `images: ["${image}"]`,
       `duration: ${duration / 1000 || 10800}`, // event duration in seconds
       `venue: ${formatVenue(venue)}`,
