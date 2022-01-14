@@ -69,9 +69,6 @@
         </svg>
         <div class="flex-grow truncate">{{ .venue }}</div>
       </div>
-      {{ if $upcoming }}
-      <p>{{ .venue }}</p>
-      {{ end }}
     </div>
     <a href="{{ .url }}" rel="noopener noreferrer" target="_blank" class="mt-2">
       {{ partial "components/button" (dict "label"
