@@ -1,67 +1,69 @@
 {{ $time := (time .Params.date) }} {{ $upcoming := ($time.After now) }} {{
-$endTime := time (add $time.Unix (int .Params.duration) ) }}
-<div
-  class="rounded-lg shadow-lg bg-white dark:bg-gray-800 w-96 h-120 overflow-auto flex flex-col"
->
-  {{ $image := .Params.thumbnail }}
-  <div class="bg-gray-200 h-56">
-    <img
-      src="{{ $image }}"
-      alt="{{ .Params.name }} presentation image"
-      class="h-full w-auto object-cover"
-    />
-  </div>
+$endTime := time (add $time.Unix (int .Params.duration) ) }} {{ $image :=
+.Params.thumbnail }}
+<a href="{{ .Permalink }}">
+  <div
+    class="rounded-lg shadow-lg bg-white dark:bg-gray-800 w-96 h-120 overflow-auto flex flex-col"
+  >
+    <div class="bg-gray-200 h-56">
+      <img
+        src="{{ $image }}"
+        alt="{{ .Params.name }} presentation image"
+        class="h-full w-auto object-cover"
+      />
+    </div>
 
-  <div class="p-6 text-center flex flex-col gap-2 flex-grow">
-    <div class="text-xl font-medium">{{ .Params.title }}</div>
-    <div
-      class="flex-grow flex flex-col justify-end items-start text-left gap-1"
-    >
-      <div class="flex flex-row gap-2 text-gray-400 justify-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-clock flex-none"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <circle cx="12" cy="12" r="9"></circle>
-          <polyline points="12 7 12 12 15 15"></polyline>
-        </svg>
-        <div class="flex-grow">
-          {{ $time.Local.Format "02/01/2006 | 15:04" }} - {{
-          $endTime.Local.Format "15:04"}}
+    <div class="p-6 text-center flex flex-col gap-2 flex-grow">
+      <div class="text-xl font-medium">{{ .Params.title }}</div>
+      <div
+        class="flex-grow flex flex-col justify-end items-start text-left gap-1"
+      >
+        <div class="flex flex-row gap-2 text-gray-400 justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-clock flex-none"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="12" cy="12" r="9"></circle>
+            <polyline points="12 7 12 12 15 15"></polyline>
+          </svg>
+          <div class="flex-grow">
+            {{ $time.Local.Format "02/01/2006 | 15:04" }} - {{
+            $endTime.Local.Format "15:04"}}
+          </div>
+        </div>
+        <div class="flex flex-row flex-nowrap text-gray-400 gap-2 w-full">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-gps flex-none"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 17l-1 -4l-4 -1l9 -4z"></path>
+          </svg>
+          <div class="flex-grow truncate">{{ .Params.venue }}</div>
         </div>
       </div>
-      <div class="flex flex-row flex-nowrap text-gray-400 gap-2 w-full">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-gps flex-none"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <circle cx="12" cy="12" r="9"></circle>
-          <path d="M12 17l-1 -4l-4 -1l9 -4z"></path>
-        </svg>
-        <div class="flex-grow truncate">{{ .Params.venue }}</div>
+      <div class="mt-2">
+        {{ partial "components/button" (dict "label"
+        site.Params.components.eventCard.infoBtn ) }}
       </div>
     </div>
-    <a href="{{ .Permalink }}" class="mt-2">
-      {{ partial "components/button" (dict "label"
-      site.Params.components.eventCard.infoBtn ) }}
-    </a>
   </div>
-</div>
+</a>
