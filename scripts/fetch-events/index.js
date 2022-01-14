@@ -1,17 +1,16 @@
-const { EVENTS_URL } = require("./constants");
-const { fetch, buildEventPages } = require("./utils");
+const { fetch, buildEventPages, formatEvent } = require("./utils");
 
 const fetchEventsAsync = new Promise(async (res, rej) => {
-  console.log(`1️⃣...... Fetching events from ENDPOINT ${EVENTS_URL}`);
-  const response = await fetch(EVENTS_URL).catch(rej);
+  console.log(`1️⃣...... Fetching events`);
+  const response = await fetch().catch(rej);
   res(response);
 })
-
-  .then((response) => {
-    console.log("2️⃣...... Formating events");
-    const json = JSON.parse(response);
+  .then((events) => {
+    return events.map(formatEvent);
+  })
+  .then((events) => {
     console.log("3️⃣...... Create events pages");
-    buildEventPages(json);
+    buildEventPages(events);
   })
   .then(() => console.log("🟢 Event fetching is DONE"))
   .catch((error) => {

@@ -2,55 +2,100 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 const os = require("os");
-const { EVENT_PAGES_PATH } = require("./constants");
+const moment = require("moment");
 
-function formatDate(timestamp) {
-  const dateObj = new Date(timestamp);
-  const offset = dateObj.getTimezoneOffset() * 60 * 1000;
-  const locale = dateObj.getTime() - offset;
-  const localeDate = new Date(locale);
-
-  let day = localeDate.getDate();
-  day = day > 9 ? day : `0${day}`;
-
-  let month = localeDate.getMonth() + 1;
-  month = month > 9 ? month : `0${month}`;
-
-  const year = localeDate.getFullYear();
-
-  return `${day}/${month}/${year}`;
-}
+const {
+  EVENT_PAGES_PATH,
+  MEETUP_FETCH_EVENTS_GRAPHQL_QUERY,
+} = require("./constants");
 
 function formatVenue(venue) {
   let formattedVenu = "";
   if (venue && venue.name) {
     formattedVenu = venue.name;
-    const { address_1, city } = venue;
-    if (address_1 && city) {
-      formattedVenu += ", " + address_1 + " - " + city;
+    const { address, city } = venue;
+    if (address && city) {
+      formattedVenu += ", " + address + " - " + city;
     }
   }
   return formattedVenu;
 }
 
-function fetch(url) {
-  return new Promise((resolve, reject) => {
-    const request = https.get(url, (response) => {
-      if (response.statusCode < 200 || response.statusCode > 299) {
-        reject(
-          new Error("Failed to load page, status code: " + response.statusCode)
-        );
-      }
-      // temporary data holder
-      const body = [];
-      // on every content chunk, push it to the data array
-      response.on("data", (chunk) => body.push(chunk));
-      // we are done, resolve promise with those joined chunks
-      response.on("end", () => resolve(body.join("")));
-    });
-    // handle connection errors of the request
-    request.on("error", (err) => reject(err));
+function fetch() {
+  const data = JSON.stringify({
+    query: MEETUP_FETCH_EVENTS_GRAPHQL_QUERY,
   });
+
+  const options = {
+    hostname: "api.meetup.com",
+    path: "gql",
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Content-Length": data.length,
+    },
+  };
+
+  return new Promise((resolve, reject) => {
+    const req = https.request(options, (res) => {
+      const { statusCode, headers } = res;
+      let returnData = "";
+
+      res.on("data", (chunk) => {
+        returnData += chunk;
+      });
+
+      res.on("end", () => {
+        resolve({ statusCode, headers, ...JSON.parse(returnData) });
+      });
+
+      res.on("error", reject);
+    });
+
+    req.on("error", reject);
+
+    req.write(data);
+    req.end();
+  }).then(({ data }) => {
+    const upcomingEvents = data.groupByUrlname.upcomingEvents.edges.map(
+      (e) => e.node
+    );
+    const pastEvents = data.groupByUrlname.pastEvents.edges.map((e) => e.node);
+    return [...upcomingEvents, ...pastEvents];
+  });
+}
+
+function formatEvent({
+  title,
+  dateTime,
+  imageUrl,
+  duration,
+  venue,
+  description,
+  shortUrl,
+}) {
+  const name = title.replace(/"/g, "'"); // remove ' character from event title
+  const date = moment(dateTime);
+  const fDate = date.format("DD/MM/YYYY"); // format date dd/mm/yyyy -- TODO i18n
+  const isoDate = date.toISOString();
+  const image = imageUrl || "/images/event-card-default-img.png";
+  const imageHighRes = imageUrl; // temporary until found a way to get high res
+  const fDuration = duration
+    ? moment.duration(duration, moment.ISO_8601).asSeconds()
+    : 10800;
+  const fVenue = formatVenue(venue);
+
+  return {
+    name,
+    date: fDate,
+    isoDate,
+    image,
+    imageHighRes,
+    duration: fDuration,
+    venue: fVenue,
+    description,
+    link: shortUrl,
+  };
 }
 
 /*
@@ -58,24 +103,16 @@ function fetch(url) {
 */
 function buildEventPages(events) {
   for (const {
-    link,
-    time,
     name,
-    description,
-    featured_photo,
+    date,
+    isoDate,
+    image,
+    imageHighRes,
     duration,
     venue,
+    description,
+    link,
   } of events) {
-    const fName = name.replace(/"/g, "'"); // remove ' character from event title
-    const date = formatDate(time); // format date dd/mm/yyyy -- TODO i18n
-    const image = featured_photo
-      ? featured_photo.photo_link
-      : "/images/event-card-default-img.png"; // set default image
-    const imageHighRes = featured_photo
-      ? featured_photo.highres_link
-      : undefined;
-    const isoDate = new Date(time).toISOString();
-
     // Event file name is its event date
     const filePath = path.join(
       EVENT_PAGES_PATH,
@@ -84,15 +121,15 @@ function buildEventPages(events) {
 
     const fileTemplate = [
       "---",
-      `title: "${fName}"`,
+      `title: "${name}"`,
       `description: "Évènement du ${date}"`,
       `date: ${isoDate}`,
       "author: meetup",
       `thumbnail: ${image}`,
       imageHighRes ? `thumbnailHighRes: ${imageHighRes}` : "",
       `images: ["${image}"]`,
-      `duration: ${duration / 1000 || 10800}`, // event duration in seconds
-      `venue: ${formatVenue(venue)}`,
+      `duration: ${duration}`, // event duration in seconds
+      `venue: ${venue}`,
       "---",
       `${description}`,
       `<div class="text-sm text-gray-400 dark:text-gray-600">initialement publié sur Meetup.com <br/> <a href="${link}" target="_blank" rel="noopener">${link}</a></div>`,
@@ -106,5 +143,6 @@ function buildEventPages(events) {
 
 module.exports = {
   fetch,
+  formatEvent,
   buildEventPages,
 };

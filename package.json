@@ -21,7 +21,8 @@
     "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.1",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^2.1.1",
+    "moment": "^2.29.1"
   },
   "browserslist": [
     "last 1 version",
