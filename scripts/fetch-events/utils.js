@@ -58,7 +58,7 @@ function fetch(url) {
 */
 function buildEventPages(events) {
   for (const {
-    id,
+    link,
     time,
     name,
     description,
@@ -91,6 +91,7 @@ function buildEventPages(events) {
       `venue: ${formatVenue(venue)}`,
       "---",
       `${description}`,
+      `<div class="text-sm text-gray-400 dark:text-gray-600">initialement publié sur Meetup.com <br/> <a href="${link}" target="_blank" rel="noopener">${link}</a></div>`,
     ];
 
     const fileStream = fs.createWriteStream(filePath);
