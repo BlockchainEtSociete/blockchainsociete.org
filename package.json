@@ -11,7 +11,7 @@
     "fetch-events": "node scripts/index.js",
     "start": "hugo --gc",
     "dev": "hugo server --disableFastRender --buildDrafts --buildFuture",
-    "build": "NODE_ENV=production hugo --gc --minify"
+    "build": "NODE_ENV=production hugo --gc --minify --buildFuture"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
