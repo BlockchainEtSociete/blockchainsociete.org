@@ -1,23 +1,11 @@
 <section id="socials" class="{{ .Site.Params.ascentColor }} dark:bg-black-400">
   <div
-    class="
-      container
-      px-6
-      py-12
-      mx-auto
-      max-w-5xl
-      flex flex-row flex-wrap
-      gap-8
-      items-center
-      justify-center
-    "
+    class="container px-6 py-12 mx-auto max-w-5xl flex flex-row flex-wrap gap-8 items-center justify-center"
   >
     <div class="max-w-md flex flex-col">
       <div class="flex flex-col items-center mb-10">
-        {{ partial "components/section-title"
-        (dict
-        "title" (i18n "homeSocialTitle")
-        "anchor" "socials" ) }}
+        {{ partial "components/section-title" (dict "title" (i18n
+        "homeSocialTitle") "anchor" "socials" ) }}
         <div class="rounded bg-black-900 dark:bg-white h-2 w-16 mt-3"></div>
       </div>
       <p class="opacity-60 text-center">{{ i18n "homeSocialDescription" }}</p>
