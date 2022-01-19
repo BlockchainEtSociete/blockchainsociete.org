@@ -2,6 +2,7 @@
   {{- partial "search-ui.html" . -}} 
 {{ end }}
 
+{{ template "goat_counter.html" . }}
 {{ template "_internal/google_analytics_async.html" . }} 
 
 {{ if ge (len $.Site.Languages) 3 }}
