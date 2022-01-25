@@ -34,7 +34,7 @@ Voici, pour la petite histoire, [le programme de ce premier meetup][premier-meet
 > - rencontres et échanges autour de jeux Agiles, apéros et pizzas
 
 [premier-meetup]: https://www.meetup.com/fr-FR/Blockchain-Societe/events/236635117/
-[^2]: à part Benjamin, les membres autres fondateurs du meetup travaillaient dans la même ESN
+[^2]: à l'exception de Benjamin, tous les autres membres fondateurs du meetup travaillaient dans la même ESN
 
 Au-delà de l'auto-promo de nos projets de l'époque (il fallait bien démarrer par quelque chose 😇), les principes du meetup sont posés et ne changeront plus : du contenu puis un apéro/réseautage financé par nos sponsors.
 Nous choisissons dès le début de proposer des contenus ouverts sur la thématique de Blockchain et ne pas nous restreindre aux seuls sujets "cryptos", ce qui nous permettra de traiter de sujets aussi bien techniques que sociétaux.
