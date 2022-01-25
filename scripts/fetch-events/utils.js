@@ -76,7 +76,6 @@ function formatEvent({
 }) {
   const name = title.replace(/"/g, "'"); // remove ' character from event title
   const date = moment(dateTime);
-  console.log("date", date, dateTime);
   const fDate = date.format("DD/MM/YYYY"); // format date dd/mm/yyyy -- TODO i18n
   const isoDate = date.toISOString(true);
   const image = imageUrl || "/images/event-card-default-img.png";
@@ -84,15 +83,16 @@ function formatEvent({
   const fDuration = duration
     ? moment.duration(duration, moment.ISO_8601).asSeconds()
     : 10800;
+  const isoEndDate = date.add(fDuration, "seconds").toISOString(true);
   const fVenue = formatVenue(venue);
 
   return {
     name,
     date: fDate,
     isoDate,
+    isoEndDate,
     image,
     imageHighRes,
-    duration: fDuration,
     venue: fVenue,
     description,
     link: shortUrl,
@@ -107,9 +107,9 @@ function buildEventPages(events) {
     name,
     date,
     isoDate,
+    isoEndDate,
     image,
     imageHighRes,
-    duration,
     venue,
     description,
     link,
@@ -125,11 +125,11 @@ function buildEventPages(events) {
       `title: "${name}"`,
       `description: "Évènement du ${date}"`,
       `date: ${isoDate}`,
+      `endDate: ${isoEndDate}`,
       "author: meetup",
       `thumbnail: ${image}`,
       imageHighRes ? `thumbnailHighRes: ${imageHighRes}` : "",
       `images: ["${image}"]`,
-      `duration: ${duration}`, // event duration in seconds
       `venue: ${venue}`,
       "---",
       `${description}`,

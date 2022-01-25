@@ -1,6 +1,8 @@
-{{ $time := (time .Params.date) }} {{ $upcoming := ($time.After now) }} {{
-$endTime := time (add $time.Unix (int .Params.duration) ) }} {{ $image :=
-.Params.thumbnail }}
+{{ $time := (time .Params.date "Europe/Paris") }} 
+{{ $endTime := (time .Params.endDate "Europe/Paris")}}
+{{ $upcoming := ($time.After now) }} 
+{{ $image := .Params.thumbnail }}
+
 <a href="{{ .Permalink }}">
   <div
     class="rounded-lg shadow-lg bg-white dark:bg-gray-800 w-96 h-120 overflow-auto flex flex-col"
