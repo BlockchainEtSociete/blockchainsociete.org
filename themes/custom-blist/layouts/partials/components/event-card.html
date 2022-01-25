@@ -1,8 +1,6 @@
-{{ $time := (time .Params.date "Europe/Paris") }} 
-{{ $endTime := (time .Params.endDate "Europe/Paris")}}
-{{ $upcoming := ($time.After now) }} 
-{{ $image := .Params.thumbnail }}
-
+{{ $time := (time .Params.date) }} {{ $upcoming := ($time.After now) }} {{
+$endTime := time (add $time.Unix (int .Params.duration) ) }} {{ $image :=
+.Params.thumbnail }}
 <a href="{{ .Permalink }}">
   <div
     class="rounded-lg shadow-lg bg-white dark:bg-gray-800 w-96 h-120 overflow-auto flex flex-col"
@@ -38,8 +36,8 @@
             <polyline points="12 7 12 12 15 15"></polyline>
           </svg>
           <div class="flex-grow">
-            {{ $time.Format "02/01/2006 | 15:04" }} - {{ $endTime.Format
-            "15:04"}}
+            {{ $time.Local.Format "02/01/2006 | 15:04" }} - {{
+            $endTime.Local.Format "15:04"}}
           </div>
         </div>
         <div class="flex flex-row flex-nowrap text-gray-400 gap-2 w-full">
