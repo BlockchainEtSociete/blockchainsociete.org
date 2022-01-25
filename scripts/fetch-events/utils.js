@@ -76,8 +76,9 @@ function formatEvent({
 }) {
   const name = title.replace(/"/g, "'"); // remove ' character from event title
   const date = moment(dateTime);
+  console.log("date", date, dateTime);
   const fDate = date.format("DD/MM/YYYY"); // format date dd/mm/yyyy -- TODO i18n
-  const isoDate = date.toISOString();
+  const isoDate = date.toISOString(true);
   const image = imageUrl || "/images/event-card-default-img.png";
   const imageHighRes = imageUrl; // temporary until found a way to get high res
   const fDuration = duration
