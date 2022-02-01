@@ -102,6 +102,14 @@
 - id: eventsDescription
   translation: "Retrouvez ici tous les évènements organisés par l'association Blockchain et Société depuis sa création en 2016."
 
+# Transcription
+- id: transcriptionTitle
+  translation: "Transcription"
+- id: transcriptionWarning
+  translation: "Attention"
+- id: transcriptionWarningMessage
+  translation: "Transcription réalisée par nos soins, fidèle aux propos des intervenant⋅e⋅s mais rendant le discours fluide. Les positions exprimées sont celles des personnes qui interviennent et ne rejoignent pas nécessairement celles de l'association, qui ne sera en aucun cas tenue responsable de leurs propos."
+
 # Footer
 - id: footerLegal
   translation: "Copyright © 2021 - Blockchain et Société, association loi 1901"
