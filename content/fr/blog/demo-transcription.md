@@ -1,5 +1,5 @@
 ---
-title: "À quoi ressemblerait notre informatique en cas de guerre ouverte ?"
+title: "[SAMPLE] À quoi ressemblerait notre informatique en cas de guerre ouverte ?"
 author: "Nigui"
 date: 2022-01-11
 draft: true
