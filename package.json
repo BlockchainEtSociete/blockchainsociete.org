@@ -18,11 +18,11 @@
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",
     "hugo-bin": "^0.79.2",
+    "moment": "^2.29.1",
     "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.1",
-    "tailwindcss": "^2.1.1",
-    "moment": "^2.29.1"
+    "tailwindcss": "^2.1.1"
   },
   "browserslist": [
     "last 1 version",
@@ -32,5 +32,6 @@
   ],
   "hugo-bin": {
     "buildTags": "extended"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
