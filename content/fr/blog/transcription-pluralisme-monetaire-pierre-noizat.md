@@ -1,6 +1,7 @@
 ---
 author: "Rachel"
 title: "Transcription du meetup \"Pluralisme monétaire : Pierre NOIZAT, pionnier du Bitcoin en France\""
+slug: "transcription-meetup-pluralisme-monetaire-pierre-noizat-pionnier-bitcoin-france"
 date: 2022-05-02
 tags: ["blog", "meetup", "transcription"]
 description: "Transcription du meetup du 9 décembre 2021 : Pluralisme monétaire : Pierre NOIZAT, pionnier du Bitcoin en France"
