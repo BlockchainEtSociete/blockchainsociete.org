@@ -1,6 +1,6 @@
 ---
 author: "Nigui"
-title: "Full example blog post"
+title: "[SAMPLE] Full example blog post"
 date: 2021-12-23
 description: "A full example blog post"
 tags: ["blog", "post", "examples"]
