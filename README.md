@@ -7,7 +7,7 @@ La section évènements est générée à partir d'un template hugo dans lequel 
 ## Prérequis
 
 - NodeJS >= 12
-- Yarn ou NPM
+- Yarn 2 (>= 3.2)
 - Optionnel, car téléchargé par le script d'install : Hugo extended >= 0.91
 
 ## Développer le site
