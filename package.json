@@ -14,15 +14,15 @@
     "build": "NODE_ENV=production hugo --gc --minify --buildFuture"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.3",
-    "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.5",
-    "hugo-bin": "^0.79.2",
-    "postcss": "^8.2.10",
-    "postcss-cli": "^8.3.1",
-    "postcss-import": "^14.0.1",
-    "tailwindcss": "^2.1.1",
-    "moment": "^2.29.1"
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.7",
+    "hugo-bin": "^0.86.0",
+    "moment": "^2.29.3",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "tailwindcss": "^3.0.24"
   },
   "browserslist": [
     "last 1 version",
@@ -32,5 +32,6 @@
   ],
   "hugo-bin": {
     "buildTags": "extended"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
