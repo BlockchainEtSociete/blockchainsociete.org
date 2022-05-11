@@ -60,7 +60,10 @@
 <script type="text/javascript">
   const tagId = "particles";
   if (!!document.getElementById(tagId)) {
-    particlesJS.load(tagId, "/assets/particles.json", function () {
+    // For a snowy atmosphere
+    // const particules = "/assets/particles-snow.json";
+    const particules = "/assets/particles-default.json";
+    particlesJS.load(tagId, particules, function () {
       console.log("callback - particles.js config loaded");
     });
   }
