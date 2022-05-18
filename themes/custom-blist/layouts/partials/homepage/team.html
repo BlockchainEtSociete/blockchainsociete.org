@@ -3,16 +3,14 @@
     class="container px-6 py-12 mx-auto max-w-4xl flex flex-col gap-8 items-center justify-center"
   >
     <div class="flex flex-col items-center">
-      {{ partial "components/section-title"
-      (dict 
-      "title" (i18n "homeTeamTitle")
+      {{ partial "components/section-title" (dict "title" (i18n "homeTeamTitle")
       "anchor" "team" ) }}
       <div class="rounded bg-black-900 dark:bg-white h-2 w-16 mt-3"></div>
     </div>
     <div class="text-lg text-normal text-center mb-3 underline-links">
       {{ i18n "homeTeamDescription" | safeHTML}}
     </div>
-    <div class="flex flex-row flex-wrap gap-11 justify-center">
+    <div class="flex flex-row flex-wrap gap-11 justify-center max-w-xl">
       <div class="flex flex-col items-center justify-center">
         <img src="/images/team/dle.jpg" class="max-w-xxs rounded-full mb-2" />
         Damien <span class="uppercase">Lecan</span>
@@ -36,6 +34,18 @@
       <div class="flex flex-col items-center justify-center">
         <img src="/images/team/bpr.jpg" class="max-w-xxs rounded-full mb-2" />
         Bertrand <span class="uppercase">Presles</span>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <img src="/images/team/llo.jpg" class="max-w-xxs rounded-full mb-2" />
+        Lucien <span class="uppercase">Loiseau</span>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <img src="/images/team/yya.jpg" class="max-w-xxs rounded-full mb-2" />
+        Yueyi<span class="uppercase">Yang</span>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <img src="/images/team/yde.png" class="max-w-xxs rounded-full mb-2" />
+        Yan <span class="uppercase">Degive</span>
       </div>
     </div>
   </div>
