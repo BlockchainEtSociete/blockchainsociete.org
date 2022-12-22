@@ -112,7 +112,7 @@
 
 # Footer
 - id: footerLegal
-  translation: "Copyright © 2021 - Blockchain et Société, association loi 1901"
+  translation: "Copyright © 2017-2023 - Blockchain et Société, association loi 1901"
 - id: footerAddress
   translation: "16 rue Maurice Daniel, 44200 Nantes"
 - id: footerPublication

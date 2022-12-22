@@ -5,7 +5,12 @@
     {{ else }}
     {{ dateFormat "2006" now }} © {{ .Site.Title }}
     {{ end }} -->
-    <span>{{ i18n "footerLegal" }}</span>
+    <a
+      href="https://www.journal-officiel.gouv.fr/pages/associations-detail-annonce/?q.id=id:201800080763"
+      target="_blank"
+      rel="noopener"
+      ><span>{{ i18n "footerLegal" }}</span></a
+    >
     <span class="font-extralight text-gray-600"
       >{{ i18n "footerAddress" }}</span
     >
