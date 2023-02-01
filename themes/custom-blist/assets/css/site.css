@@ -91,3 +91,7 @@ a.page-link {
 .switch-btn:checked {
   background-position: 100%;
 }
+
+.w-11rem {
+  width: 11rem;
+}
