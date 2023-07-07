@@ -63,6 +63,7 @@ enableRobotsTXT = true
 [params.social]
   twitter = "https://twitter.com/Blockchain44"
   slack = "https://join.slack.com/t/meetup-blockchain/shared_invite/zt-3u8hgq75-hkvVna9GdMnRwf7Pq4tqFw"
+  discord = "https://discord.gg/dYprQ6553F"
   github = "https://github.com/BlockchainEtSociete"
   meetup = "https://www.meetup.com/fr-FR/Blockchain-Societe/"
   youtube = "https://www.youtube.com/channel/UCLxvA3g5oqdItCMvO6Scfhg"
