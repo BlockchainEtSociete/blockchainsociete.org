@@ -119,9 +119,12 @@ function buildEventPages(events) {
       `${isoDate.substring(0, 10)}.md`
     );
 
+    // remove /!\ character from event title
+    const filteredName = name.replaceAll('/!\\', '').trim();
+
     const fileTemplate = [
       "---",
-      `title: "${name}"`,
+      `title: "${filteredName}"`,
       `description: "Évènement du ${date}"`,
       `date: ${isoDate}`,
       "author: meetup",
