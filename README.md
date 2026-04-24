@@ -4,6 +4,8 @@ Ce projet est un site statique pour [l'association blockchain et societe](http:/
 
 La section évènements est générée à partir d'un template hugo dans lequel sont injectées les données provenant de l'api meetup.com
 
+___En date du 24/02/2026 l'association a été dissoute par décision de l'AG 2026___
+
 ## Prérequis
 
 - NodeJS >= 12
